@@ -62,3 +62,6 @@ log.txt
 */game/saves/
 traceback.txt
 project.json
+game/cache/*
+game/cache/bytecode.rpyb
+game/saves/*
