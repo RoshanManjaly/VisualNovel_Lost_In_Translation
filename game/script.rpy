@@ -178,12 +178,15 @@ label end_of_call:
         "What should I do?"
 
         "Poke my head in the door and say hi to Sato-sensei.":
+            $ convo_with_sato = True
             jump head_poke
 
         "Continue home.":
+            $ convo_with_sato = False
             jump continue_home
 
 label head_poke:
+
     "I decide it can't hurt to say hi to Sato-sensei, so I poke my head in the door to do so."
 
     yuuki "Sato-sensei! How are you?"
@@ -263,7 +266,11 @@ label continue_home:
 
     # moving train sounds
 
-    "I'm on the train home, leaning against the window and thinking back to my conversations with my parents and with Sato-sensei."
+    if convo_with_sato:
+        "I'm on the train home, leaning against the window and thinking back to my conversations with my parents and with Sato-sensei."
+
+    else:
+        "I'm on the train home, leaning against the window and thinking back to my conversation with my parents."
 
     "I've been thinking about this a lot: I'm happier than I've ever been, living my life as a man rather than as a woman. However, I'm also more isolated than I've ever been. It's hard to figure out what face to put on toward different people in my life."
 
