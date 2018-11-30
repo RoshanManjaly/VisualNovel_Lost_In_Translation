@@ -306,15 +306,17 @@ label story_b_continue_home:
 ###################### Japan Story End
 
 label story_c:
-        "Wake Up"
+    show bedroom with dissolve
+    "Wake Up"
 
-        menu:
-            "Stay in bed a little longer?":
-                jump story_c_in_bed
-            "Morning Prayer?":
-                jump story_c_morning_routine
+    menu:
+        "Stay in bed a little longer?":
+            jump story_c_in_bed
+        "Morning Prayer?":
+            jump story_c_morning_routine
 
 label story_c_in_bed:
+    show bedroom with dissolve
     "You reach over and grab your phone"
 
     menu:
@@ -324,6 +326,7 @@ label story_c_in_bed:
             jump story_c_binder
 
 label story_c_morning_routine:
+    show bedroom with dissolve
     "Your rustling wakes up Aasim"
 
     "You kiss him on the cheek and roll out of bed. You pick up the ring from the bedside table"
@@ -338,6 +341,7 @@ label story_c_morning_routine:
 
 
 label story_c_news:
+    show news with dissolve
     "Article: Once ostracized now Pakistan: Transgender people are running for Parliament"
 
     "Hmmm.... maybe I should vote this year. When are Elections again?"
@@ -345,7 +349,7 @@ label story_c_news:
     "Opens Calendar App"
 
     #Calendar App Opening screen switch
-
+    show calendar1 with dissolve
     "Today's Date: July 13th, 2018"
     "Election Day: July 25th, 2018"
     "Dr. Ralhan comes for shots: July 28th, 2018"
@@ -357,6 +361,7 @@ label story_c_news:
             jump story_c_binder
 
 label story_c_calendar:
+    show calendar2 with dissolve
     "Right ... Hajj ... "
 
     "Hopefully Allah can change the thinking of the Saudi Government in my lifetime"
@@ -367,6 +372,7 @@ label story_c_calendar:
 
 
 label story_c_binder:
+    show tinder with dissolve
     "Left, Left, Lef....oooo...."
 
     "nope. jk. He's too pendu"
@@ -380,7 +386,7 @@ label story_c_binder:
             jump story_c_news
 
 label story_c_binder_repeating:
-
+    show tinder with dissolve
     "Left, Left, Left"
 
     "Still nothing good today"
@@ -392,6 +398,7 @@ label story_c_binder_repeating:
             jump story_c_news
 
 label story_c_late:
+    show makeup with dissolve
     "You run to the bathroom and shart putting on your make up"
 
     "You wear the salwar kameez you bought last weekend and head out. You wave hello to the chowkidar and head down the road"
@@ -403,11 +410,13 @@ label story_c_late:
             jump story_c_main_road
 
 label story_c_back_road:
+    show backroad with dissolve
     "You walk through some alleys. On your way, you say hello to some children, give 100 rupees to the woman on the street corner (even though you know it goes straight to the guru - 100 rupees for a blessing isnt too bad of a deal), and skip over some puddles"
     "Nothing too out of the ordinary"
     jump story_c_arrived
 
 label story_c_main_road:
+    show mainroad with dissolve
     "Hey! Beautiful gay!"
     "You look at the standing niama (police officer or mother's brother"
     "He burns away, 'Family always has your back', you say sarcastically under your breath"
@@ -415,11 +424,13 @@ label story_c_main_road:
     jump story_c_arrived
 
 label story_c_arrived:
+    show office with dissolve
     " 'Government of Pakistan' ... You're Here"
     "You hand the security guard your I.D. He looks you up and down and looks like he’s about to raise an eyebrow. But he doesn’t. You’re let in without exchanging a word"
     "Normal day at work. Paper pushing, phone checking, some staring"
     "Who actually cares about other people’s takes"
 
+    show clock3pm with dissolve
     "The clock hits 3pm. Time to check out and you're feeling lazy"
     menu:
         "Rikshaw":
@@ -428,11 +439,13 @@ label story_c_arrived:
             jump story_c_uber
 
 label story_c_rikshaw:
+    show rickshaw with dissolve
     "You walk to the street corner and flag one down. He takes you home and takes you home and you pay in 20 rupees. He says thank you"
     "No words other than that"
 
 
 label story_c_uber:
+    show uberpak with dissolve
     "You walk outside and she pick you up. You say thank you and get out"
     "No words other than that"
 
@@ -447,6 +460,7 @@ label story_c_home:
 
 
 label story_c_tv:
+    show marvia with dissolve
     "Its Marvia Malik on Kohenoon News. She's talking about village gange that killed two men suspected of being gay"
 
     menu:
@@ -456,15 +470,16 @@ label story_c_tv:
             jump story_c_brother
 
 label story_c_tv_drama:
+    show drama with dissolve
     "How can a saas be so cruel? You think to yourself."
     "You enjoy your lazy day. You watch T.V. till its time to prep dinner. You wash your dishes, do your night prayers, and head to bed."
-
     #Story is finished
 
     jump end
 
 
 label story_c_brother:
+    show bhai with dissolve
     pak_main "Its been a week! You don't have to check up on your little sister?"
     brother "I'm sorry"
     pak_main "Fine. I guess I should be the one chekcin gup on you. You're okay?"
@@ -478,7 +493,6 @@ label story_c_brother:
     pak_main "Okay. OKay. What can I do?"
     brother "Nothing right now. ... I'm fine ... Chalo, I'll call you this weekend. I'm a little busy right now"
     pak_main "Bye"
-
     #Screen change
 
     "'How did I get it better than him?' You think to yourself"
