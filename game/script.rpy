@@ -195,10 +195,10 @@ label head_poke:
     menu:
         "How do I respond?"
 
-        "Tell her I'm also well."
+        "Tell her I'm also well.":
             jump do_well
 
-        "Tell her about my troubles with my parents."
+        "Tell her about my troubles with my parents.":
             jump troubles_with_parents
 
 label do_well:
