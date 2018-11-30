@@ -3,7 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define yuuki = Character("Yuuki")
+define yuuki = Character("Ohno Yuuki")
+define ayako = Character("Sato Ayako")
 define jap_mom   = Character("Mom")
 define jap_dad   = Character("Dad")
 
@@ -28,9 +29,6 @@ label start:
 
         "Pakistan":
             jump story_c
-
-
-
 
 
 label story_a:
@@ -67,6 +65,8 @@ label story_b:
 
     jap_mom "You decided to spend your prime in Tokyo and you're telling me that you can't find any halfway decent eligible bachelors?"
 
+    "I'm having my weekly lunch break phone call with my parents, who live (and raised me in) the countryside."
+
     "It's been several months since I'd started at my schoolteacher position in Tokyo. My parents haven't gotten over that their 'daughter' is in The Big City, in 'her' twenties, and yet, obstinately single. They mean well, but... sometimes their advice is a tad misguided."
 
     "For one thing, although I live in an overcrowded city, it's not exactly easy for me to find 'halfway decent eligible' guys interested in me because, well, I'm a guy too."
@@ -80,6 +80,8 @@ label story_b:
     scene bg room
 
     menu:
+        "How do I respond?"
+
         "Tell Mom and Dad you'll try your best.":
             jump reassure
 
@@ -90,11 +92,11 @@ label story_b:
             jump werent_listening
 
 label reassure:
-    yuuki "{i}Ganbarimasu.{/i}"
+    yuuki "{a=http://lang-8.com/725244/journals/199182171541683591437838792131877435706}{i}Ganbarimasu.{/i}{/a}"
 
     jap_mom "That's our Yuuki!"
 
-    yuuki "The thing is--"
+    yuuki "The thing is—"
 
     jump end_of_call
 
@@ -130,7 +132,7 @@ label end_of_call:
     hide okaasan
     hide otousan
 
-    "I sigh in mild relief. Another conversation with my parents, another day I remain in their good graces as their only and darling daughter. I keep telling myself that one day, one of these days, I'll tell them about my gender troubles and happenings, but there's never seems like a 'right' time."
+    "I sigh in mild relief. Another uneventful conversation with my parents, another day I remain in their good graces as their only and darling daughter. I keep telling myself that one day, one of these days, I'll tell them about my gender troubles and happenings, but there's never seems like a 'right' time."
 
     "Students shuffle into the classroom, as lethargic as you'd expect high schoolers to be on a Monday afternoon."
 
@@ -150,7 +152,134 @@ label end_of_call:
 
     yuuki "If the two functions f(x) and g(x) are differentiable (i.e. the derivative exist) then the product is differentiable and {font=fonts/Inconsolata-Regular.ttf}(fg)' = f'g + fg'{/font}."
 
+    "My body becomes more relaxed as I continue writing on the chalkboard and reading my own handwriting aloud."
 
+    "Math's always comforted me, with its no-nonsense language and problems. In contrast to having to figure out how to conversations with my parents that didn't leave me feeling like I'd somehow betrayed them, calculus problems were a pleasure."
+
+    # more chalkboard sounds
+
+    "A couple of hours pass like this, and then I've found myself dismissing my last class of the day."
+
+    show bg hallway with dissolve
+
+    "As a new faculty member, I haven't yet been asked to sponsor any after-school club, so I go home a little earlier than other teachers."
+
+    "I make my way through the school hallways, idly trying to recall if I have any unexpired food left in the fridge."
+
+    "I pass by Sato Ayako-sensei's classroom, where I find her hunched over at her desk, looking somewhat deep in thought. Sato-sensei is interesting—she's kept trying to make acquaintances with me, despite my reserved nature. Well, 'my reserved nature' isn't quite right..."
+
+    "I wouldn't think of myself as reserved, but, ever since I started transitioning, I found myself unsure of where I fit into society and how to proceed with developing new interpersonal relationships."
+
+    "I look cisgender enough that I don't have to worry about confused stares, but I worry about becoming 'exposed' if I were to let those unfamiliar with my history get close to me. There's no way of knowing how they'd react."
+
+    "Still, it'd be nice to have a friend in an unfamiliar city..."
+
+    menu:
+        "What should I do?"
+
+        "Poke my head in the door and say hi to Sato-sensei.":
+            jump head_poke
+
+        "Continue home.":
+            jump continue_home
+
+label head_poke:
+    "I decide it can't hurt to say hi to Sato-sensei, so I poke my head in the door to do so."
+
+    yuuki "Sato-sensei! How are you?"
+
+    show ayako happy
+
+    ayako "I'm well. How are you, Ohno-sensei?"
+
+    menu:
+        "How do I respond?"
+
+        "Tell her I'm also well."
+            jump do_well
+
+        "Tell her about my troubles with my parents."
+            jump troubles_with_parents
+
+label do_well:
+    yuuki "I'm doing well. You seem deep in thought—what're you working on?"
+
+    ayako "Ah, it's nothing big. It's just that I'm realizing that I'll be spending the holidays alone."
+
+    "I wonder if she's telling me this as a subtle hint to invite her out for the holidays. I wouldn't mind hanging out with Sato-sensei, but it's hard to feel 'right' hanging out with anyone while being a very closeted trans man. I worry about giving off the wrong messages and getting into an uncomfortable situation."
+
+    yuuki "Well, getting some well-deserved peace and quiet to yourself sounds like an excellent vacation."
+
+    "Sato-sensei smiled, but doesn't seem convinced."
+
+    ayako "I'll try to remind myself of that."
+
+    "She turns her attention from me to some papers on her desk."
+
+    ayako "I have some paperwork to fill out, so we should catch up later."
+
+    "I nod and walk back into the hallway."
+
+    jump continue_home
+
+
+label troubles_with_parents:
+    yuuki "I'm mostly doing well, the most complicated thing in my life is that I'm having some drama with my parents."
+
+    ayako "Oh no! What's going on?"
+
+    yuuki "It's nothing big! They just keep pushing me to get a girlfriend; they don't like how much of a loner I seem to be."
+
+    "I cringe slightly at my use of 'girlfriend', when my parents would probably faint if they'd heard I had one."
+
+    ayako "You {i}are{/i} a bit of a loner. Maybe a girlfriend would get you to go out more!"
+
+    yuuki "Yeah, maybe."
+
+    "I wonder if I'd be able to find a partner who'd push me out of the protective shell I've formed for myself—I sure hope I do."
+
+    "Sato-sensei averts her glance from me to her desk."
+
+    ayako "Actually, I have no holiday plans right now, aside from that I need to do some shopping for my family members."
+
+    "Without meaning to, I tense my body."
+
+    ayako "Would you like to come along with me?"
+
+    "Sato-sensei is a nice person, and I'm sure I'd have a great time with her but without thinking I immediately respond:"
+
+    yuuki "Sorry, I've already done my holiday shopping and my upcoming schedule is a bit hectic, right now."
+
+    "Sato-sensei immediately puts her hands up, palms toward me, signalling for me not to feel bad about my rejection."
+
+    ayako "I completely understand. I have some paperwork to fill out, so we should catch up more later."
+
+    "I nod and walk back into the hallway."
+
+    jump continue_home
+
+label continue_home:
+    show bg train with dissolve
+
+    # moving train sounds
+
+    "I'm on the train home, leaning against the window and thinking back to my conversations with my parents and with Sato-sensei."
+
+    "I've been thinking about this a lot: I'm happier than I've ever been, living my life as a man rather than as a woman. However, I'm also more isolated than I've ever been. It's hard to figure out what face to put on toward different people in my life."
+
+    "I look through my Twitter feed, hoping to find some meme or another that'll make me laugh."
+
+    "Instead, I come across a tweet from Ebina City Council member Tsuruhashi Masumi, in response to Asahi Shimbun's report on an attitude survey regarding same sex marriage:"
+
+    "'If abnormal people increase, human beings will become extinct. … Homosexuality is abnormal. Media should be more responsible than to report abnormal activities.'"
+
+    "'{a=https://www.tofugu.com/japan/conformity-in-japan/}The nail that sticks out gets hammered down{\a},' as the saying goes."
+
+    "Would I be regarded as a 'homosexual' in Tsuruhashi-san's eyes, when I identify as a man and am interested in women? Probably, I think, resolving not to further dwell on the subject."
+
+    "I look out the window and watch the city pass by. I let myself fall asleep, telling myself to be content with what I have. As long as I don't make too much of a splash around me, I'll be fine."
+
+    hide bg train with dissolve
 
     # This ends the game.
 
