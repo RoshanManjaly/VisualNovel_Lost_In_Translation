@@ -15,6 +15,7 @@ define jap_dad   = Character("Dad")
 # story_b = set in Japan
 # story_c = set in Pakistan
 
+# TODO: Add BGM for each of the routes
 
 
 label start:
