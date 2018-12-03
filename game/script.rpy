@@ -60,7 +60,7 @@ label end:
 ###################### Canada Story Start
 
 label story_a:
-    can_main "Ugh it's morning…"
+    can_main "{i}Ugh it's morning…{/i}"
     menu:
         "Go to school":
             jump story_a_to_school
@@ -485,7 +485,7 @@ label story_c_morning_routine:
 
 label story_c_news:
     scene pk news with dissolve
-    "Once ostracized now Pakistan: Transgender people are running for Parliament"
+    "Once ostracized now Pakistani Transgender people are running for Parliament"
 
     "{i}Hmmm.... maybe I should vote this year. When are Elections again?{/i}"
 
@@ -537,7 +537,7 @@ label story_c_binder_repeating:
 
 
 label story_c_your_late:
-    "You're Late"
+    "You look at the time. You're Late!"
 
     jump story_c_late
 
@@ -563,10 +563,10 @@ label story_c_back_road:
 
 label story_c_main_road:
     scene pk mainroad with dissolve
-    "Hey! Beautiful gay!"
+    "'Hey! Beautiful gay!'"
     "You look at the standing mama"
-    "He turns away,"
-    pak_main "'Family always has your back', you say sarcastically under your breath"
+    "He turns away"
+    pak_main "'Family always has your back,' you say sarcastically under your breath"
     "{i}Hmm... maybe you should call your brother today. Although it is his responsiblity{/i}"
     jump story_c_arrived
 
@@ -587,7 +587,7 @@ label story_c_arrived:
 
 label story_c_rikshaw:
     scene pk rickshaw with dissolve
-    "You walk to the street corner and flag one down. He takes you home and you pay in 20 rupees. He says thank you"
+    "You walk to the street corner and flag one down. He takes you home and you pay him 20 rupees. He says 'thank you'"
     "No words other than that"
     jump story_c_home
 
@@ -608,7 +608,7 @@ label story_c_home:
 
 label story_c_tv:
     scene pk marvia with dissolve
-    "Its Marvia Malik on Kohenoon News. She's talking about village gange that killed two men suspected of being gay"
+    "Its Marvia Malik on Kohenoon News. She's talking about a village gang that killed two men {i}suspected{/i} of being gay"
 
     menu:
         "Switch to Drama Network":
@@ -628,10 +628,10 @@ label story_c_brother:
     scene pk bhai with dissolve
     pak_main "It's been a week! You don't have to check up on your little sister?"
     brother "I'm sorry"
-    pak_main "Fine. I guess I should be the one chekcing up on you. You're okay?"
+    pak_main "Fine. I guess I should be the one checking up on you. You're okay?"
     brother "Yeah, fine"
     pak_main "How's Kareem?"
-    brother "We broke up?"
+    brother "We broke up"
     pak_main "Oh ... Are you okay? Do you want to talk about it?"
     brother "I'm fine, but I don't feel like talking"
     pak_main "He wont tell anyone, will he?"
