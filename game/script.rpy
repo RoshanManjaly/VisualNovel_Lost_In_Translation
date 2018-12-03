@@ -7,6 +7,7 @@
 define can_main   = Character("You")
 define camila   = Character("Camila")
 define teacher   = Character("Teacher")
+define Principal   = Character("Principal")
 define can_mom   = Character("Mom")
 define guidance_counselor   = Character("Guidance Councelor")
 define therapist   = Character("Therapist")
@@ -72,11 +73,6 @@ label story_c_define:
     Chalo - literally ‘let’s go;’ often used as a transition in conversation\n"
     jump story_c
 
-
-
-
-
-
 label end:
     scene main_menu
     "Play Again?"
@@ -120,11 +116,10 @@ label story_a_to_school:
             jump story_a_frustrated
 
 label story_a_frustrated:
-    scene ca_camila
-    show ca_teacher_outside at left
+    jumpca_lockers
     can_main "YOU DON’T GET IT! *slam fist into lockers* "
     camila "*yelps*"
-    can_main "(thinking) oh no I didn’t mean it… I--"
+    can_main "{i} oh no I didn’t mean it… I--{\i}"
     teacher "Stop right there, young lady! You’re going to the principal’s office"
     menu:
         "Go to principal’s office":
@@ -136,7 +131,7 @@ label story_a_brush_off:
 
 label story_a_fake_sick:
     scene ca_morning
-    show ca_mom at right
+    show ca_mom_bedroom
     "*Mom comes in the room worried*"
     can_mom "Hi honey, why aren’t you getting ready for school?"
     can_main "I’m not feeling well. I think I’m gonna stay home today"
@@ -146,8 +141,6 @@ label story_a_fake_sick:
             jump story_a_to_school
         "Stay in bed":
             jump story_a_stay_bed
-
-
 
 label story_a_stay_bed:
     scene ca_morning
@@ -196,7 +189,7 @@ label story_a_gc:
 
 label story_a_home:
     scene black
-    show ca_mom
+    show ca_mom_bedroom
     can_mom "Honey, what happened? The school called and told me you were having some trouble. Is there anything I can do to help?"
     can_main "I’m fine."
     can_mom "You know you can talk to me about anything. I love you."
@@ -218,7 +211,7 @@ label story_a_ditch_school:
 
 label story_a_coffee_shop:
     scene ca_coffee
-    can_main "(thinking) *Sigh* I love this place… Maybe I should order something that will calm me down."
+    can_main "{i} *Sigh* I love this place… Maybe I should order something that will calm me down.{\i}"
     menu:
         "Order a cool espresso drink":
             jump story_a_coffee_shop_next
@@ -228,7 +221,7 @@ label story_a_coffee_shop:
 
 label story_a_coffee_shop_next:
     scene ca_coffee
-    can_main "(thinking) *Sighing* Ahhh that’s kind of better… Ugh I don’t know what to do. I’m so all over the place, I need to organize my thoughts."
+    can_main "{i} *Sighing* Ahhh that’s kind of better… Ugh I don’t know what to do. I’m so all over the place, I need to organize my thoughts.{\i}"
     menu:
         "Listen to music and reflect":
             jump story_a_music
@@ -237,7 +230,7 @@ label story_a_coffee_shop_next:
 
 label story_a_music:
     scene ca_coffee
-    can_main "(thinking) This isn’t working…"
+    can_main "{i} This isn’t working…{\i}"
     menu:
         "Write in journal":
             jump story_a_journal
@@ -245,7 +238,7 @@ label story_a_music:
 
 label story_a_journal:
     scene ca_journal
-    can_main "(thinking) Well she told me to keep a journal months ago and I’ve just been carrying this empty one around in my bag… time to use it. I don’t really see how it could help but there’s no harm in trying I guess…"
+    can_main "{i} Well she told me to keep a journal months ago and I’ve just been carrying this empty one around in my bag… time to use it. I don’t really see how it could help but there’s no harm in trying I guess…{\i}"
     "(writes) Dear Diary (scratch out)"
     "..."
     "{i}No that’s not my style…{/i}"
