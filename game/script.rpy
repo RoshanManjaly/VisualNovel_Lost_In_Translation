@@ -49,7 +49,7 @@ label start:
 
 label story_a_define:
     scene black with fade
-    jump story_c
+    jump story_a
 
 label story_b_define:
     scene black with fade
@@ -92,7 +92,7 @@ label end:
 ###################### Canada Story Start
 
 label story_a:
-    scene ca_bedroom
+    scene ca_morning
     can_main "Ugh it's morning…"
     menu:
         "Go to school":
@@ -248,8 +248,8 @@ label story_a_journal:
     can_main "(thinking) Well she told me to keep a journal months ago and I’ve just been carrying this empty one around in my bag… time to use it. I don’t really see how it could help but there’s no harm in trying I guess…"
     "(writes) Dear Diary (scratch out)"
     "..."
-    "(thinking) No that’s not my style…"
-    "(writes) I don’t really know what has been going on with me, but I guess that’s why I’m writing this…"
+    "{i}No that’s not my style…{/i}"
+    "*writing* I don’t really know what has been going on with me, but I guess that’s why I’m writing this…"
     jump end
 
 
