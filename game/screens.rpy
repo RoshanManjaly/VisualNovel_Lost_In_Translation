@@ -277,7 +277,7 @@ screen quick_menu():
 
             textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')
-            textbutton _("Glossary") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("Glossary") action ShowMenu('glossary')
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
             textbutton _("Q.Save") action QuickSave()
@@ -984,6 +984,101 @@ style history_label:
     xfill True
 
 style history_label_text:
+    xalign 0.5
+
+
+
+
+## History screen ##############################################################
+##
+## This is a screen that displays the dialogue history to the player. While
+## there isn't anything special about this screen, it does have to access the
+## dialogue history stored in _history_list.
+##
+## https://www.renpy.org/doc/html/history.html
+
+
+screen glossary():
+
+    tag menu
+
+    ## Avoid predicting this screen, as it can be very large.
+    predict False
+
+    use game_menu(_("History"), scroll=("vpgrid" if gui.glossary_height else "viewport"), yinitial=1.0):
+
+        style_prefix "glossary"
+
+        for h in _glossary_list:
+
+            window:
+
+                ## This lays things out properly if glossary_height is None.
+                has fixed:
+                    yfit True
+
+                if h.who:
+
+                    label h.who:
+                        style "glossary_name"
+                        substitute False
+
+                        ## Take the color of the who text from the Character, if
+                        ## set.
+                        if "color" in h.who_args:
+                            text_color h.who_args["color"]
+
+                $ what = renpy.filter_text_tags(h.what, allow=gui.glossary_allow_tags)
+                text what:
+                    substitute False
+
+        if not _glossary_list:
+            label _("The dialogue glossary is empty.")
+
+
+## This determines what tags are allowed to be displayed on the glossary screen.
+
+define gui.glossary_allow_tags = set()
+
+
+style glossary_window is empty
+
+style glossary_name is gui_label
+style glossary_name_text is gui_label_text
+style glossary_text is gui_text
+
+style glossary_text is gui_text
+
+style glossary_label is gui_label
+style glossary_label_text is gui_label_text
+
+style glossary_window:
+    xfill True
+    ysize gui.glossary_height
+
+style glossary_name:
+    xpos gui.glossary_name_xpos
+    xanchor gui.glossary_name_xalign
+    ypos gui.glossary_name_ypos
+    xsize gui.glossary_name_width
+
+style glossary_name_text:
+    min_width gui.glossary_name_width
+    text_align gui.glossary_name_xalign
+
+style glossary_text:
+    xpos gui.glossary_text_xpos
+    ypos gui.glossary_text_ypos
+    xanchor gui.glossary_text_xalign
+    xsize gui.glossary_text_width
+    min_width gui.glossary_text_width
+    text_align gui.glossary_text_xalign
+    layout ("subtitle" if gui.glossary_text_xalign else "tex")
+
+style glossary_label:
+    xfill True
+
+style glossary_label_text:
     xalign 0.5
 
 
