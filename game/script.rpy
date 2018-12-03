@@ -40,11 +40,41 @@ label start:
 
     menu:
         "Canada":
-            jump story_a
+            jump story_a_define
         "Japan":
-            jump story_b
+            jump story_b_define
         "Pakistan":
-            jump story_c
+            jump story_c_define
+
+
+label story_a_define:
+    scene black with fade
+    jump story_c
+
+label story_b_define:
+    scene black with fade
+    jump story_b
+
+label story_c_define:
+    scene black with fade
+    "Glossary - if you need to refer to any of these definitions during gameplay, click the ‘History’ tab in the bottom of the screen and scroll to the top.\n
+    Chai - spiced milk tea\n
+    Hajj - an annual pilgrimage to Mecca that takes place in the last month of the year that all Muslims are expected to make at least once in their lifetime\n
+    insha’Allah = ‘God willing’\n
+    Pendu - colloquially used to refer to someone or something that reminds you of village life\n
+    Salwar Kameez - a traditional South Asian outfit with a long tunic and loose, pleated trousers\n
+    Rupees - the national currency of Pakistan\n
+    Guru - literally ‘teacher;’ in the context of transgender communities, it refers to the matriarch of the adoptive family structures that often form. ‘Gurus’ are often compared to Western pimps.\n
+    Mamu - literally ‘mother’s brother;’ colloquially used to refer to police officers\n
+    Marvia Malik - Pakistan’s first transgender news anchor; she works for Kohenoon News based in Lahore, Pakistan\n
+    Saas - literally ‘mother-in-law’\n
+    Bahu - literally ‘daughter-in-law’\n
+    Chalo - literally ‘let’s go;’ often used as a transition in conversation\n"
+    jump story_c
+
+
+
+
 
 
 label end:
@@ -626,7 +656,7 @@ label story_c_tv:
 
 label story_c_tv_drama:
     scene pk drama with dissolve
-    "{i}How can a saas be so cruel!?{/i}"
+    "{i}Finally, not another saas-bahu drama {/i}"
     "You enjoy your lazy day. You watch T.V. till it's time to prep dinner. You wash your dishes, do your night prayers, and head to bed."
     #Story is finished
 
