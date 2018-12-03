@@ -116,7 +116,8 @@ label story_a_to_school:
             jump story_a_frustrated
 
 label story_a_frustrated:
-    jumpca_lockers
+    scene ca_lockers
+
     can_main "YOU DON’T GET IT! *slam fist into lockers* "
     camila "*yelps*"
     can_main "{i} oh no I didn’t mean it… I--{\i}"

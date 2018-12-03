@@ -988,17 +988,6 @@ style history_label_text:
 
 
 
-
-# ## Glossary screen ##############################################################
-#
-# screen glossary():
-#
-#     tag menu
-#
-#     ## Avoid predicting this screen, as it can be very large.
-#     predict False
-#
-#     use game_menu(_("Glossary"), scroll=("vpgrid" if gui.glossary_height else "viewport"), yinitial=1.0):
 #
 #         style_prefix "glossary"
 #
