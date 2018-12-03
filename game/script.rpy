@@ -484,7 +484,8 @@ label story_c_morning_routine:
     jump story_c_late
 
 label story_c_news:
-    scene pk news with dissolve
+    scene black
+    show pk news with dissolve
     "Once ostracized now Pakistani Transgender people are running for Parliament"
 
     "{i}Hmmm.... maybe I should vote this year. When are Elections again?{/i}"
@@ -504,7 +505,8 @@ label story_c_news:
             jump story_c_binder
 
 label story_c_calendar:
-    scene pk calendar2 with dissolve
+    scene black
+    show pk calendar2 with dissolve
     "Right ... Hajj ... "
 
     "{i}Hopefully things will change in the Saudi Government soon, insha'Allah{/i}"
@@ -514,7 +516,8 @@ label story_c_calendar:
     jump story_c_late
 
 label story_c_binder:
-    scene pk tinder with dissolve
+    scene black
+    show pk tinder with dissolve
     "Left, Left, Lef....oooo...."
 
     "{i}nope. jk. He's too pendu{/i}"
@@ -528,7 +531,8 @@ label story_c_binder:
             jump story_c_news
 
 label story_c_binder_repeating:
-    scene pk tinder with dissolve
+    scene black
+    show pk tinder with dissolve
     "Left, Left, Left"
 
     "{i}Still nothing good today{/i}"
