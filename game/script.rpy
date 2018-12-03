@@ -190,7 +190,7 @@ label story_a_gc:
 
 label story_a_home:
     scene black
-    show ca_mom_bedroom
+    show ca_kitchen
     can_mom "Honey, what happened? The school called and told me you were having some trouble. Is there anything I can do to help?"
     can_main "I’m fine."
     can_mom "You know you can talk to me about anything. I love you."
@@ -206,11 +206,11 @@ label story_a_ditch_school:
     can_main "*thinking* I can’t do this anymore I need to go somewhere"
     menu:
         "Go home":
-            jump story_a_therapy
+            jump story_a_home
         "Go to the town (coffee shop)":
             jump story_a_therapy
 
-label story_a_coffee_shop:
+label story_a_therapy:
     scene ca_coffee
     can_main "{i} *Sigh* I love this place… Maybe I should order something that will calm me down.{\i}"
     menu:
