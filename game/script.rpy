@@ -32,7 +32,7 @@ define pak_main   = Character("You")
 # TODO: Add BGM for each of the routes
 
 label start:
-    scene selection_v2
+    scene selection_v4
     "Where would you like travel to?"
 
     menu:
@@ -297,10 +297,9 @@ label story_b_end_of_call:
 
     # Play sound of call disconnecting
 
-    hide ca_home_t
-
     yuuki "*sigh in mild relief*. {i} Another uneventful conversation with my parents, another day I remain in their good graces as their only and darling daughter. I keep telling myself that one day, one of these days, I'll tell them about my gender troubles and happenings, but there's never seems like a 'right' time. {/i}"
-
+    hide ca_home_t
+    scene jp room
     "Students shuffle into the classroom, as lethargic as you'd expect high schoolers to be on a Monday afternoon."
 
     yuuki "Alright, everyone. Let's settle in and start our review session for the test later this week."
@@ -334,7 +333,7 @@ label story_b_end_of_call:
 
     "You make my way through the school hallways, idly trying to recall if you have any unexpired food left in the fridge."
 
-    "You pass by Sato Ayako-sensei's classroom, where you find her hunched over at her desk, looking somewhat deep in thought. Sato-sensei is interesting—she's kept trying to make acquaintances with me, despite my reserved nature. Well, 'my reserved nature' isn't quite right..."
+    "You pass by Sato Ayako-sensei's classroom, where you find her hunched over at her desk, looking somewhat deep in thought. Sato-sensei is interesting—she's kept trying to make acquaintances with you, despite you reserved nature. {i}Well, 'my reserved nature' isn't quite right...{/i}"
 
     "{i}I wouldn't think of myself as reserved, but, ever since I started transitioning, I found myself unsure of where I fit into society and how to proceed with developing new interpersonal relationships.{/i}"
 
@@ -369,6 +368,7 @@ label story_b_head_poke:
             jump story_b_troubles_with_parents
 
 label story_b_do_well:
+
     yuuki "I'm doing well. You seem deep in thought—what're you working on?"
 
     ayako "Ah, it's nothing big. It's just that I'm realizing that I'll be spending the holidays alone."
@@ -379,7 +379,7 @@ label story_b_do_well:
 
     yuuki "Well, getting some well-deserved peace and quiet to yourself sounds like an excellent vacation."
 
-    "Sato-sensei smiled, but doesn't seem convinced."
+    "Sato-sensei smiles, but doesn't seem convinced."
 
     ayako "I'll try to remind myself of that."
 
@@ -410,7 +410,7 @@ label story_b_troubles_with_parents:
 
     ayako "Actually, I have no holiday plans right now, aside from that I need to do some shopping for my family members."
 
-    "*Without meaning to, you tense my body.*"
+    "*Without meaning to, you tense your body.*"
 
     ayako "Would you like to come along with me?"
 
