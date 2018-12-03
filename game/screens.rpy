@@ -1009,19 +1009,19 @@ screen glossary():
 
         vbox:
             label "[config.name!t]"
+            text _("Bahu - literally ‘daughter-in-law’\n")
             text _("Chai - spiced milk tea\n")
+            text _("Chalo - literally ‘let’s go;’ often used as a transition in conversation\n")
+            text _("Chowkidar - gate keeper\n")
+            text _("Guru - literally ‘teacher;’ in the context of transgender communities, it refers to the matriarch of the adoptive family structures that often form. ‘Gurus’ are often compared to Western pimps.\n")
             text _("Hajj - an annual pilgrimage to Mecca that takes place in the last month of the year that all Muslims are expected to make at least once in their lifetime\n")
             text _("insha’Allah = ‘God willing’\n")
-            text _("Pendu - colloquially used to refer to someone or something that reminds you of village life\n")
-            text _("Salwar Kameez - a traditional South Asian outfit with a long tunic and loose, pleated trousers\n")
-            text _("Rupees - the national currency of Pakistan\n")
-            text _("Guru - literally ‘teacher;’ in the context of transgender communities, it refers to the matriarch of the adoptive family structures that often form. ‘Gurus’ are often compared to Western pimps.\n")
             text _("Mamu - literally ‘mother’s brother;’ colloquially used to refer to police officers\n")
             text _("Marvia Malik - Pakistan’s first transgender news anchor; she works for Kohenoon News based in Lahore, Pakistan\n")
+            text _("Pendu - colloquially used to refer to someone or something that reminds you of village life\n")
+            text _("Rupees - the national currency of Pakistan\n")
             text _("Saas - literally ‘mother-in-law’\n")
-            text _("Bahu - literally ‘daughter-in-law’\n")
-            text _("Chalo - literally ‘let’s go;’ often used as a transition in conversation\n")
-
+            text _("Salwar Kameez - a traditional South Asian outfit with a long tunic and loose, pleated trousers\n")
 
 ## This is redefined in options.rpy to add text to the glossary screen.
 define gui.glossary = ""

@@ -188,6 +188,7 @@ label story_a_home:
             jump story_a_therapy
 
 label story_a_therapy:
+    scene ca_therapist
     therapist "Good afternoon! How have you been?"
     can_main "Mostly good…"
     therapist "Well that’s good to hear! Is there anything that you want to talk about?"
@@ -198,7 +199,7 @@ label story_a_therapy:
 
 label story_a_ditch_school:
     scene ca_ditching
-    can_main "{i}thinking I can’t do this anymore I need to go somewhere {\i}"
+    can_main "{i} I can’t do this anymore I need to go somewhere {\i}"
     menu:
         "Go home":
             jump story_a_home
@@ -646,7 +647,7 @@ label story_c_rikshaw:
 
 label story_c_uber:
     scene pk uber with dissolve
-    "You walk outside and she picks you up. You say 'thank you' and get out"
+    "You walk outside and he picks you up. You say 'thank you' and get out"
     "No words other than that"
     jump story_c_home
 
