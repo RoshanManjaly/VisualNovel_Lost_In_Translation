@@ -1022,6 +1022,8 @@ screen glossary():
             text _("Rupees - the national currency of Pakistan\n")
             text _("Saas - literally ‘mother-in-law’\n")
             text _("Salwar Kameez - a traditional South Asian outfit with a long tunic and loose, pleated trousers\n")
+            text _("Sensei - a teacher\n")
+
 
 ## This is redefined in options.rpy to add text to the glossary screen.
 define gui.glossary = ""

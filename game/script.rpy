@@ -13,7 +13,7 @@ define guidance_counselor   = Character("Guidance Counselor")
 define therapist   = Character("Therapist")
 
 ## Japan Characters
-define yuuki = Character("Ohno Yuuki")
+define yuuki = Character("You")
 define ayako = Character("Sato Ayako")
 define jap_mom   = Character("Mom")
 define jap_dad   = Character("Dad")
@@ -24,16 +24,12 @@ define brother   = Character("Brother")
 define pak_main   = Character("You")
 
 
-
-
 # The game starts here.
-
 # story_a = set in Canada
 # story_b = set in Japan
 # story_c = set in Pakistan
 
 # TODO: Add BGM for each of the routes
-
 
 label start:
     scene selection_v2
@@ -46,20 +42,15 @@ label start:
             jump story_b_define
         "Pakistan":
             jump story_c_define
-
-
 label story_a_define:
     scene black with fade
     jump story_a
-
 label story_b_define:
     scene black with fade
     jump story_b
-
 label story_c_define:
     scene black with fade
     jump story_c
-
 label end:
     scene main_menu
     "Play Again?"
@@ -71,9 +62,7 @@ label end:
         "Maybe another time":
             return
 
-
 ###################### Canada Story Start
-
 label story_a:
     scene ca_morning
     can_main "Ugh it's morning…"
@@ -82,8 +71,6 @@ label story_a:
             jump story_a_to_school
         "Fake being sick":
             jump story_a_fake_sick
-
-
 label story_a_to_school:
     scene ca_camila
     can_main "Oh, hey, Camila."
@@ -101,7 +88,6 @@ label story_a_to_school:
             jump story_a_brush_off
         "Get frustrated":
             jump story_a_frustrated
-
 label story_a_frustrated:
     scene ca_lockers
 
@@ -112,11 +98,9 @@ label story_a_frustrated:
     menu:
         "Go to principal’s office":
             jump story_a_principal
-
 label story_a_brush_off:
     can_main "Maybe…"
     jump story_a_class
-
 label story_a_fake_sick:
     scene ca_morning
     show ca_mom_bedroom
@@ -129,12 +113,10 @@ label story_a_fake_sick:
             jump story_a_to_school
         "Stay in bed":
             jump story_a_stay_bed
-
 label story_a_stay_bed:
     scene ca_morning
     can_main "{i}This is never gonna get any better, why would I even bother? Ughhhhh I’m going back to sleep…{/i}"
     jump end
-
 label story_a_principal:
     scene ca_principal
     Principal "We do not allow violence at this school young lady. Please take a seat while I call your parents."
@@ -142,7 +124,6 @@ label story_a_principal:
     menu:
         "Leave the office and ditch school":
             jump story_a_ditch_school
-
 label story_a_class:
     scene ca_teacher
     "*Bell rings again*"
@@ -157,7 +138,6 @@ label story_a_class:
             jump story_a_ditch_school
         "Go to guidance counselor":
             jump story_a_gc
-
 label story_a_gc:
     scene ca_guidance
     guidance_counselor "So, what’s going on? It’s been a while since I last saw you."
@@ -173,7 +153,6 @@ label story_a_gc:
             jump story_a_ditch_school
         "Go home to worried mom":
             jump story_a_home
-
 label story_a_home:
     scene black
     show ca_kitchen
@@ -186,7 +165,6 @@ label story_a_home:
     menu:
         "Go to therapy":
             jump story_a_therapy
-
 label story_a_therapy:
     scene ca_therapist
     therapist "Good afternoon! How have you been?"
@@ -195,8 +173,6 @@ label story_a_therapy:
     can_main "Actually... it’s not good. I haven’t been feeling right for a while now, but everyone keeps telling me that it probably has to do with my transition. I don’t think it does though… I can just tell."
     therapist "Hmmmm. It’s completely possible to have other issues, you’re only human. Let’s talk this out and see what we can do…"
     jump end
-
-
 label story_a_ditch_school:
     scene ca_ditching
     can_main "{i} I can’t do this anymore I need to go somewhere {\i}"
@@ -205,7 +181,6 @@ label story_a_ditch_school:
             jump story_a_home
         "Go to the town (coffee shop)":
             jump story_a_coffee
-
 label story_a_coffee:
     scene ca_coffee
     can_main "{i} *Sigh* I love this place… Maybe I should order something that will calm me down.{\i}"
@@ -214,8 +189,6 @@ label story_a_coffee:
             jump story_a_coffee_shop_next
         "Order a black coffee":
             jump story_a_coffee_shop_next
-
-
 label story_a_coffee_shop_next:
     scene ca_coffee
     can_main "{i} *Sighing* Ahhh that’s kind of better… Ugh I don’t know what to do. I’m so all over the place, I need to organize my thoughts.{\i}"
@@ -224,15 +197,12 @@ label story_a_coffee_shop_next:
             jump story_a_music
         "Write in journal":
             jump story_a_journal
-
 label story_a_music:
     scene ca_coffee
     can_main "{i} This isn’t working…{\i}"
     menu:
         "Write in journal":
             jump story_a_journal
-
-
 label story_a_journal:
     scene ca_journal
     can_main "{i} Well she told me to keep a journal months ago and I’ve just been carrying this empty one around in my bag… time to use it. I don’t really see how it could help but there’s no harm in trying I guess…{\i}"
@@ -242,9 +212,6 @@ label story_a_journal:
     "{i}No that’s not my style…{/i}"
     "*writing* I don’t really know what has been going on with me, but I guess that’s why I’m writing this…"
     jump end
-
-
-
 ###################### Canada Story End
 
 
@@ -258,35 +225,31 @@ label story_b:
     # add a file (named either "jp bg room.png" or "jp bg room.jpg") to the
     # images directory to show it.
 
-    scene jp room
+
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
     # These display lines of dialogue.
-
-    show ca_home_t
+    scene black
+    show jp home_t
 
     jap_mom "You decided to spend your prime in Tokyo and you're telling me that you can't find any halfway decent eligible bachelors?"
 
-    "I'm having my weekly lunch break phone call with my parents, who live (and raised me in) the countryside."
+    "You're having your weekly lunch break phone call with your parents, who live (and raised you in) the countryside."
 
-    "It's been several months since I'd started at my schoolteacher position in Tokyo. My parents haven't gotten over that their 'daughter' is in The Big City, in 'her' twenties, and yet, obstinately single. They mean well, but... sometimes their advice is a tad misguided."
+    "It's been several months since you'd started your schoolteacher position in Tokyo. Your parents haven't gotten over that their 'daughter' is in The Big City, in 'her' twenties, and yet, obstinately single. They mean well, but... sometimes their advice is a tad misguided."
 
-    "For one thing, although I live in an overcrowded city, it's not exactly easy for me to find 'halfway decent eligible' guys interested in me because, well, I'm a guy too."
+    "{i}For one thing, although I live in an overcrowded city, it's not exactly easy for me to find 'halfway decent eligible' guys interested in me because, well, I'm a guy too.{/i}"
 
     jap_mom "Your father and I are only getting older. We only have so many years left to see our grandchildren before we make our exit."
 
-    "It's funny she'd say that, because I'd been thinking of getting sterilized... I don't know that I never want biological children, but Japanese law won't recognize my gender identity unless I become 'unable to reproduce'."
+    "{i}It's funny she'd say that, because I'd been thinking of getting sterilized... I don't know that I never want biological children, but Japanese law won't recognize my gender identity unless I become 'unable to reproduce'. {/i}"
 
     jap_mom "Yuuki-chan, are you listening? Tell your parents they won't die before seeing their grandchildren."
 
-    scene jp room
-
     menu:
-        "How do I respond?"
-
         "Tell Mom and Dad you'll try your best.":
             jump story_b_reassure
 
@@ -336,7 +299,7 @@ label story_b_end_of_call:
 
     hide ca_home_t
 
-    "I sigh in mild relief. Another uneventful conversation with my parents, another day I remain in their good graces as their only and darling daughter. I keep telling myself that one day, one of these days, I'll tell them about my gender troubles and happenings, but there's never seems like a 'right' time."
+    yuuki "*sigh in mild relief*. {i} Another uneventful conversation with my parents, another day I remain in their good graces as their only and darling daughter. I keep telling myself that one day, one of these days, I'll tell them about my gender troubles and happenings, but there's never seems like a 'right' time. {/i}"
 
     "Students shuffle into the classroom, as lethargic as you'd expect high schoolers to be on a Monday afternoon."
 
@@ -344,54 +307,53 @@ label story_b_end_of_call:
 
     "At the reminder of the upcoming test, the students straighten themselves in their seats a little and put effort into being (or seeming?) alert and attentive."
 
-    "At the start of the school year, during the first couple days of my teaching career, I was a little taken aback that I, someone who'd only so recently been on the other side of the classroom, was being heralded as an 'authority'."
+    "{i} At the start of the school year, during the first couple days of my teaching career, I was a little taken aback that I, someone who'd only so recently been on the other side of the classroom, was being heralded as an 'authority'. {/i}"
 
-    "Now, though, I found myself teasing with my power when I could. The atmosphere change in the classroom at the mention of a test hasn't gotten old, yet."
+    "{i} Now, though, I found myself teasing with my power when I could. The atmosphere change in the classroom at the mention of a test hasn't gotten old, yet.{/i} "
 
     # chalkboard sounds
 
-    "{i}PRODUCT RULE and QUOTIENT RULE{/i}, I write out on the chalkboard."
+    "*{i}PRODUCT RULE and QUOTIENT RULE{/i}, are written out on the chalkboard.*"
 
     yuuki "To differentiate products and quotients we have the Product Rule and the Quotient Rule."
 
     yuuki "If the two functions f(x) and g(x) are differentiable (i.e. the derivative exist) then the product is differentiable and {font=fonts/Inconsolata-Regular.ttf}(fg)' = f'g + fg'{/font}."
 
-    "My body becomes more relaxed as I continue writing on the chalkboard and reading my own handwriting aloud."
+    "*Body Relaxes, continuing to write on the chalkboard while reading the handwriting aloud*"
 
-    "Math's always comforted me, with its no-nonsense language and problems. In contrast to having to figure out how to conversations with my parents that didn't leave me feeling like I'd somehow betrayed them, calculus problems were a pleasure."
+    yuuki "{i}Math's always comforted me, with its no-nonsense language and problems. In contrast to having to figure out how to conversations with my parents that didn't leave me feeling like I'd somehow betrayed them, calculus problems were a pleasure.{/i}"
 
     # more chalkboard sounds
 
-    "A couple of hours pass like this, and then I've found myself dismissing my last class of the day."
+    "*A couple hours pass like this. The last class of the day gets dismissed*"
 
     show jp hallway with dissolve
 
-    "As a new faculty member, I haven't yet been asked to sponsor any after-school club, so I go home a little earlier than other teachers."
+    "As a new faculty member, you haven't yet been asked to sponsor any after-school club, so you go home a little earlier than other teachers."
+    # "I make my way through the school hallways, idly trying to recall if I have any unexpired food left in the fridge."
 
-    "I make my way through the school hallways, idly trying to recall if I have any unexpired food left in the fridge."
+    "You make my way through the school hallways, idly trying to recall if you have any unexpired food left in the fridge."
 
-    "I pass by Sato Ayako-sensei's classroom, where I find her hunched over at her desk, looking somewhat deep in thought. Sato-sensei is interesting—she's kept trying to make acquaintances with me, despite my reserved nature. Well, 'my reserved nature' isn't quite right..."
+    "You pass by Sato Ayako-sensei's classroom, where you find her hunched over at her desk, looking somewhat deep in thought. Sato-sensei is interesting—she's kept trying to make acquaintances with me, despite my reserved nature. Well, 'my reserved nature' isn't quite right..."
 
-    "I wouldn't think of myself as reserved, but, ever since I started transitioning, I found myself unsure of where I fit into society and how to proceed with developing new interpersonal relationships."
+    "{i}I wouldn't think of myself as reserved, but, ever since I started transitioning, I found myself unsure of where I fit into society and how to proceed with developing new interpersonal relationships.{/i}"
 
-    "I look cisgender enough that I don't have to worry about confused stares, but I worry about becoming 'exposed' if I were to let those unfamiliar with my history get close to me. There's no way of knowing how they'd react."
+    "{i}I look cisgender enough that I don't have to worry about confused stares, but I worry about becoming 'exposed' if I were to let those unfamiliar with my history get close to me. There's no way of knowing how they'd react.{/i}"
 
-    "Still, it'd be nice to have a friend in an unfamiliar city..."
+    "{i}Still, it'd be nice to have a friend in an unfamiliar city...{/}"
 
     menu:
-        "What should I do?"
-
-        "Poke my head in the door and say hi to Sato-sensei.":
+        "Poke  head in the door and say hi to Sato-sensei":
             $ convo_with_sato = True
             jump story_b_head_poke
 
-        "Continue home.":
+        "Continue home":
             $ convo_with_sato = False
             jump story_b_continue_home
 
 label story_b_head_poke:
 
-    "I decide it can't hurt to say hi to Sato-sensei, so I poke my head in the door to do so."
+    "{i}it can't hurt to say hi to Sato-sensei{/i}"
 
     yuuki "Sato-sensei! How are you?"
 
@@ -400,12 +362,10 @@ label story_b_head_poke:
     ayako "I'm well. How are you, Ohno-sensei?"
 
     menu:
-        "How do I respond?"
-
-        "Tell her I'm also well.":
+        "Tell her your also well.":
             jump story_b_do_well
 
-        "Tell her about my troubles with my parents.":
+        "Tell her about your troubles with my parents.":
             jump story_b_troubles_with_parents
 
 label story_b_do_well:
@@ -413,7 +373,9 @@ label story_b_do_well:
 
     ayako "Ah, it's nothing big. It's just that I'm realizing that I'll be spending the holidays alone."
 
-    "I wonder if she's telling me this as a subtle hint to invite her out for the holidays. I wouldn't mind hanging out with Sato-sensei, but it's hard to feel 'right' hanging out with anyone while being a very closeted trans man. I worry about giving off the wrong messages and getting into an uncomfortable situation."
+    "{i}I wonder if she's telling you this as a subtle hint to invite her out for the holidays. I wouldn't mind hanging out with Sato-sensei, but it's hard to feel 'right' hanging out with anyone while being a very closeted trans man.{/i}"
+
+    "{i}I worry about giving off the wrong messages and getting into an uncomfortable situation.{/i}"
 
     yuuki "Well, getting some well-deserved peace and quiet to yourself sounds like an excellent vacation."
 
@@ -421,11 +383,11 @@ label story_b_do_well:
 
     ayako "I'll try to remind myself of that."
 
-    "She turns her attention from me to some papers on her desk."
+    "She turns her attention from you to some papers on her desk."
 
     ayako "I have some paperwork to fill out, so we should catch up later."
 
-    "I nod and walk back into the hallway."
+    "*I nod and walk back into the hallway.*"
 
     jump story_b_continue_home
 
@@ -436,31 +398,31 @@ label story_b_troubles_with_parents:
 
     yuuki "It's nothing big! They just keep pushing me to get a girlfriend; they don't like how much of a loner I seem to be."
 
-    "I cringe slightly at my use of 'girlfriend', when my parents would probably faint if they'd heard I had one."
+    "You cringe slightly at your use of 'girlfriend', when your parents would probably faint if they'd heard I had one."
 
     ayako "You {i}are{/i} a bit of a loner. Maybe a girlfriend would get you to go out more!"
 
     yuuki "Yeah, maybe."
 
-    "I wonder if I'd be able to find a partner who'd push me out of the protective shell I've formed for myself—I sure hope I do."
+    "{i}I wonder if I'd be able to find a partner who'd push me out of the protective shell I've formed for myself—I sure hope I do.{/i}"
 
-    "Sato-sensei averts her glance from me to her desk."
+    "Sato-sensei averts her glance from you to her desk."
 
     ayako "Actually, I have no holiday plans right now, aside from that I need to do some shopping for my family members."
 
-    "Without meaning to, I tense my body."
+    "*Without meaning to, you tense my body.*"
 
     ayako "Would you like to come along with me?"
 
-    "Sato-sensei is a nice person, and I'm sure I'd have a great time with her but without thinking I immediately respond:"
+    "{i}Sato-sensei is a nice person, and I'm sure I'd have a great time with her but without thinking I immediately respond:{/i}"
 
     yuuki "Sorry, I've already done my holiday shopping and my upcoming schedule is a bit hectic, right now."
 
-    "Sato-sensei immediately puts her hands up, palms toward me, signalling for me not to feel bad about my rejection."
+    "Sato-sensei immediately puts her hands up, palms toward you, signaling for you not to feel bad about your rejection."
 
     ayako "I completely understand. I have some paperwork to fill out, so we should catch up more later."
 
-    "I nod and walk back into the hallway."
+    "You nod and walk back into the hallway."
 
     jump story_b_continue_home
 
@@ -470,24 +432,28 @@ label story_b_continue_home:
     # moving train sounds
 
     if convo_with_sato:
-        "I'm on the train home, leaning against the window and thinking back to my conversations with my parents and with Sato-sensei."
+        "You're on the train home, leaning against the window and thinking back to your conversations with my parents and with Sato-sensei."
 
     else:
-        "I'm on the train home, leaning against the window and thinking back to my conversation with my parents."
+        "You're on the train home, leaning against the window and thinking back to your conversation with my parents."
 
-    "I've been thinking about this a lot: I'm happier than I've ever been, living my life as a man rather than as a woman. However, I'm also more isolated than I've ever been. It's hard to figure out what face to put on toward different people in my life."
+    "{i}I'm happier than I've ever been, living my life as a man rather than as a woman. However, I'm also more isolated than I've ever been. It's hard to figure out what face to put on toward different people in my life.{/i}"
 
-    "I look through my Twitter feed, hoping to find some meme or another that'll make me laugh."
+    "You look through my Twitter feed, hoping to find some meme or another that'll make you laugh."
 
-    "Instead, I come across a tweet from Ebina City Council member Tsuruhashi Masumi, in response to Asahi Shimbun's report on an attitude survey regarding same sex marriage:"
+    "Instead, you come across a tweet from Ebina City Council member Tsuruhashi Masumi, in response to Asahi Shimbun's report on an attitude survey regarding same sex marriage:"
 
     "'If abnormal people increase, human beings will become extinct. … Homosexuality is abnormal. Media should be more responsible than to report abnormal activities.'"
 
-    "'{a=https://www.tofugu.com/japan/conformity-in-japan/}The nail that sticks out gets hammered down{\a},' as the saying goes."
+    # "'{a=https://www.tofugu.com/japan/conformity-in-japan/}The nail that sticks out gets hammered down{\a},' as the saying goes."
 
-    "Would I be regarded as a 'homosexual' in Tsuruhashi-san's eyes, when I identify as a man and am interested in women? Probably, I think, resolving not to further dwell on the subject."
+    "{i}The nail that sticks out gets hammered down, as the saying goes. {/i}"
 
-    "I look out the window and watch the city pass by. I let myself fall asleep, telling myself to be content with what I have. As long as I don't make too much of a splash around me, I'll be fine."
+    "{i}Would I be regarded as a 'homosexual' in Tsuruhashi-san's eyes, when I identify as a man and am interested in women? Probably, I think, resolving not to further dwell on the subject.{/i}"
+
+    "You look out the window and watch the city pass by. You let yourself fall asleep, telling yourself to be content with what you have"
+
+    "{i}As long as I don't make too much of a splash around me, I'll be fine.{/i}"
 
     hide jp train with dissolve
 
@@ -506,7 +472,6 @@ label story_c:
             jump story_c_in_bed
         "Brush teeth":
             jump story_c_morning_routine
-
 label story_c_in_bed:
     scene pk bedroom with dissolve
     "*grab your phone*"
@@ -516,7 +481,6 @@ label story_c_in_bed:
             jump story_c_news
         "Tinder!":
             jump story_c_binder
-
 label story_c_morning_routine:
     scene pk bedroom with dissolve
     "*rustling*"
@@ -531,7 +495,6 @@ label story_c_morning_routine:
     "You look at the time. You're late!!"
 
     jump story_c_late
-
 label story_c_news:
     scene black
     show pk news with dissolve
@@ -553,7 +516,6 @@ label story_c_news:
             jump story_c_calendar
         "Tinder!":
             jump story_c_binder
-
 label story_c_calendar:
     scene black
     show pk calendar2 with dissolve
@@ -564,7 +526,6 @@ label story_c_calendar:
     "You look over at the clock for the time. You're late!!"
 
     jump story_c_late
-
 label story_c_binder:
     scene black
     show pk tinder with dissolve
@@ -579,7 +540,6 @@ label story_c_binder:
             jump story_c_binder_repeating
         "News!":
             jump story_c_news
-
 label story_c_binder_repeating:
     scene black
     show pk tinder2 with dissolve
@@ -588,15 +548,10 @@ label story_c_binder_repeating:
     "{i}Still nothing good today{/i}"
 
     jump story_c_your_late
-
-
 label story_c_your_late:
     "You look at the time. You're late!"
 
     jump story_c_late
-
-
-
 label story_c_late:
     scene pk makeup with dissolve
     "You run to the bathroom and start putting on your make up"
@@ -608,13 +563,11 @@ label story_c_late:
             jump story_c_back_road
         "There's safety in being in public":
             jump story_c_main_road
-
 label story_c_back_road:
     scene pk backroad with dissolve
     "You walk through some alleys. On your way, you say hello to some children, give 100 rupees to the woman on the street corner (even though you know it goes straight to the guru - 100 rupees for a blessing isnt too bad of a deal), and skip over some puddles"
     "{i}Nothing too out of the ordinary{/i}"
     jump story_c_arrived
-
 label story_c_main_road:
     scene pk mainroad with dissolve
     "'Hey! Beautiful gay!'"
@@ -623,7 +576,6 @@ label story_c_main_road:
     pak_main "'Family always has your back,' you say sarcastically under your breath"
     "{i}Hmm... maybe you should call your brother today. Although it is his responsiblity{/i}"
     jump story_c_arrived
-
 label story_c_arrived:
     scene pk office with dissolve
     " 'Government of Pakistan' ... You're here"
@@ -638,19 +590,16 @@ label story_c_arrived:
             jump story_c_rikshaw
         "Uber":
             jump story_c_uber
-
 label story_c_rikshaw:
     scene pk rickshaw with dissolve
     "You walk to the street corner and flag one down. He takes you home and you pay him 20 rupees. He says 'thank you'"
     "No words other than that"
     jump story_c_home
-
 label story_c_uber:
     scene pk uber with dissolve
     "You walk outside and he picks you up. You say 'thank you' and get out"
     "No words other than that"
     jump story_c_home
-
 label story_c_home:
     scene pk home
     "You stroll into your home and take a seat on the couch"
@@ -660,7 +609,6 @@ label story_c_home:
             jump story_c_tv
         "Call your brother":
             jump story_c_brother
-
 label story_c_tv:
     scene pk marvia with dissolve
     "Its Marvia Malik on Kohenoon News. She's talking about a village gang that killed two men {i}suspected{/i} of being gay"
@@ -670,7 +618,6 @@ label story_c_tv:
             jump story_c_tv_drama
         "Uhhh... you should definitely call your brother":
             jump story_c_brother
-
 label story_c_tv_drama:
     scene pk drama with dissolve
     "{i}Finally, not another saas-bahu drama {/i}"
@@ -678,7 +625,6 @@ label story_c_tv_drama:
     #Story is finished
 
     jump end
-
 label story_c_brother:
     scene black
     show pk bhai with dissolve
