@@ -35,16 +35,18 @@ define pak_main   = Character("You")
 
 
 label start:
-    scene main_menu
+    scene selection_v2
     "Where would you like travel to?"
 
     menu:
-        "Pakistan":
-            jump story_c
-        "Japan":
-            jump story_b
         "Canada":
             jump story_a
+        "Japan":
+            jump story_b
+        "Pakistan":
+            jump story_c
+
+
 label end:
     scene main_menu
     "Play Again?"
@@ -60,6 +62,7 @@ label end:
 ###################### Canada Story Start
 
 label story_a:
+    scene ca_bedroom
     can_main "Ugh it's morning…"
     menu:
         "Go to school":
@@ -69,6 +72,7 @@ label story_a:
 
 
 label story_a_to_school:
+    scene ca_camila
     can_main "Oh, hey, Camila."
     camila "Hey, girl! Why so glum?"
     can_main "It’s nothing… just not feeling it today."
@@ -215,8 +219,7 @@ label story_b:
 
     # These display lines of dialogue.
 
-    show jp okaasan happy at left
-    show jp otousan happy at right
+    show ca_home_t
 
     jap_mom "You decided to spend your prime in Tokyo and you're telling me that you can't find any halfway decent eligible bachelors?"
 
@@ -284,8 +287,7 @@ label story_b_end_of_call:
 
     # Play sound of call disconnecting
 
-    hide jp okaasan
-    hide jp otousan
+    hide ca_home_t
 
     "I sigh in mild relief. Another uneventful conversation with my parents, another day I remain in their good graces as their only and darling daughter. I keep telling myself that one day, one of these days, I'll tell them about my gender troubles and happenings, but there's never seems like a 'right' time."
 
@@ -453,9 +455,9 @@ label story_c:
     "*wake up*"
 
     menu:
-        "Stay in bed a little longer?":
+        "Stay in bed a little longer":
             jump story_c_in_bed
-        "Brush Teeth?":
+        "Brush teeth":
             jump story_c_morning_routine
 
 label story_c_in_bed:
@@ -463,7 +465,7 @@ label story_c_in_bed:
     "*grab your phone*"
 
     menu:
-        "News?":
+        "News":
             jump story_c_news
         "Tinder!":
             jump story_c_binder
@@ -493,13 +495,14 @@ label story_c_news:
     "*Opens Calendar App*"
 
     #Calendar App Opening screen switch
-    scene pk calendar1 with dissolve
+    scene black
+    show pk calendar1 with dissolve
     "Today's Date: July 13th, 2018"
     "Election Day: July 25th, 2018"
     "Dr. Rahman comes for shots: July 28th, 2018"
 
     menu:
-        "Keep looking at your Calendar?":
+        "Keep looking at your calendar":
             jump story_c_calendar
         "Tinder!":
             jump story_c_binder
@@ -525,14 +528,14 @@ label story_c_binder:
     "{i}nothing good today{/i}"
 
     menu:
-        "Keep Swiping?":
+        "Keep Swiping":
             jump story_c_binder_repeating
         "News!":
             jump story_c_news
 
 label story_c_binder_repeating:
     scene black
-    show pk tinder with dissolve
+    show pk tinder2 with dissolve
     "Left, Left, Left"
 
     "{i}Still nothing good today{/i}"
@@ -541,7 +544,7 @@ label story_c_binder_repeating:
 
 
 label story_c_your_late:
-    "You look at the time. You're Late!"
+    "You look at the time. You're late!"
 
     jump story_c_late
 
@@ -576,7 +579,7 @@ label story_c_main_road:
 
 label story_c_arrived:
     scene pk office with dissolve
-    " 'Government of Pakistan' ... You're Here"
+    " 'Government of Pakistan' ... You're here"
     "You hand the security guard your I.D. He looks you up and down and looks like he’s about to raise an eyebrow. But he doesn’t. You’re let in without exchanging a word"
     "Normal day at work. Paper pushing, phone checking, some staring"
     "{i}Who actually cares about other people’s taxes{/i}"
@@ -596,12 +599,13 @@ label story_c_rikshaw:
     jump story_c_home
 
 label story_c_uber:
-    scene pk uberpak with dissolve
+    scene pk uber with dissolve
     "You walk outside and she picks you up. You say 'thank you' and get out"
     "No words other than that"
     jump story_c_home
 
 label story_c_home:
+    scene pk home
     "You stroll into your home and take a seat on the couch"
 
     menu:
@@ -629,8 +633,9 @@ label story_c_tv_drama:
     jump end
 
 label story_c_brother:
-    scene pk bhai with dissolve
-    pak_main "It's been a week! You don't have to check up on your little sister?"
+    scene black
+    show pk bhai with dissolve
+    pak_main "It's been a week! Don't you don't have to check up on your little sister?"
     brother "I'm sorry"
     pak_main "Fine. I guess I should be the one checking up on you. You're okay?"
     brother "Yeah, fine"
@@ -640,7 +645,7 @@ label story_c_brother:
     brother "I'm fine, but I don't feel like talking"
     pak_main "He wont tell anyone, will he?"
     brother "He's not tryna to kill me"
-    pak_main "Okay. OKay. What can I do?"
+    pak_main "Okay. Okay. What can I do?"
     brother "Nothing right now. ... I'm fine ... Chalo, I'll call you this weekend. I'm a little busy right now"
     pak_main "Bye"
     #Screen change
