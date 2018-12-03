@@ -989,44 +989,50 @@ style history_label_text:
 
 
 
-## Glossary screen ##############################################################
+## Glossary screen ################################################################
+##
+## This screen gives credit and copyright information glossary the game and Ren'Py.
+##
+## There's nothing special glossary this screen, and hence it also serves as an
+## example of how to make a custom screen.
 
 screen glossary():
 
     tag menu
 
-    ## Avoid predicting this screen, as it can be very large.
-    predict False
-
-    use game_menu(_("Glossary"), scroll=("vpgrid" if gui.glossary_height else "viewport"), yinitial=1.0):
+    ## This use statement includes the game_menu screen inside this one. The
+    ## vbox child is then included inside the viewport inside the game_menu
+    ## screen.
+    use game_menu(_("Glossary"), scroll="viewport"):
 
         style_prefix "glossary"
 
-        for h in _glossary_list:
+        vbox:
+            label "[config.name!t]"
+            text _("Chai - spiced milk tea\n")
+            text _("Hajj - an annual pilgrimage to Mecca that takes place in the last month of the year that all Muslims are expected to make at least once in their lifetime\n")
+            text _("insha’Allah = ‘God willing’\n")
+            text _("Pendu - colloquially used to refer to someone or something that reminds you of village life\n")
+            text _("Salwar Kameez - a traditional South Asian outfit with a long tunic and loose, pleated trousers\n")
+            text _("Rupees - the national currency of Pakistan\n")
+            text _("Guru - literally ‘teacher;’ in the context of transgender communities, it refers to the matriarch of the adoptive family structures that often form. ‘Gurus’ are often compared to Western pimps.\n")
+            text _("Mamu - literally ‘mother’s brother;’ colloquially used to refer to police officers\n")
+            text _("Marvia Malik - Pakistan’s first transgender news anchor; she works for Kohenoon News based in Lahore, Pakistan\n")
+            text _("Saas - literally ‘mother-in-law’\n")
+            text _("Bahu - literally ‘daughter-in-law’\n")
+            text _("Chalo - literally ‘let’s go;’ often used as a transition in conversation\n")
 
-            window:
 
-                ## This lays things out properly if glossary_height is None.
-                has fixed:
-                    yfit True
+## This is redefined in options.rpy to add text to the glossary screen.
+define gui.glossary = ""
 
-                if h.who:
 
-                    label h.who:
-                        style "glossary_name"
-                        substitute False
+style glossary_label is gui_label
+style glossary_label_text is gui_label_text
+style glossary_text is gui_text
 
-                        ## Take the color of the who text from the Character, if
-                        ## set.
-                        if "color" in h.who_args:
-                            text_color h.who_args["color"]
-
-                $ what = renpy.filter_text_tags(h.what, allow=gui.glossary_allow_tags)
-                text what:
-                    substitute False
-
-        if not _glossary_list:
-            label _("The dialogue glossary is empty.")
+style glossary_label_text:
+    size gui.label_text_size
 
 
 

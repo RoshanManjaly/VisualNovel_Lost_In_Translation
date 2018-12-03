@@ -270,7 +270,7 @@ label story_b:
     # add a file (named either "jp bg room.png" or "jp bg room.jpg") to the
     # images directory to show it.
 
-    scene jp bg room
+    scene jp room
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -294,7 +294,7 @@ label story_b:
 
     jap_mom "Yuuki-chan, are you listening? Tell your parents they won't die before seeing their grandchildren."
 
-    scene jp bg room
+    scene jp room
 
     menu:
         "How do I respond?"
@@ -376,7 +376,7 @@ label story_b_end_of_call:
 
     "A couple of hours pass like this, and then I've found myself dismissing my last class of the day."
 
-    show jp bg hallway with dissolve
+    show jp hallway with dissolve
 
     "As a new faculty member, I haven't yet been asked to sponsor any after-school club, so I go home a little earlier than other teachers."
 
@@ -477,7 +477,7 @@ label story_b_troubles_with_parents:
     jump story_b_continue_home
 
 label story_b_continue_home:
-    show jp bg train with dissolve
+    show jp train with dissolve
 
     # moving train sounds
 
@@ -501,7 +501,7 @@ label story_b_continue_home:
 
     "I look out the window and watch the city pass by. I let myself fall asleep, telling myself to be content with what I have. As long as I don't make too much of a splash around me, I'll be fine."
 
-    hide jp bg train with dissolve
+    hide jp train with dissolve
 
     # This ends the game.
 
@@ -694,7 +694,7 @@ label story_c_tv_drama:
 label story_c_brother:
     scene black
     show pk bhai with dissolve
-    pak_main "It's been a week! Don't you don't have to check up on your little sister?"
+    pak_main "It's been a week! Don't you have to check up on your little sister?"
     brother "I'm sorry"
     pak_main "Fine. I guess I should be the one checking up on you. You're okay?"
     brother "Yeah, fine"
