@@ -119,11 +119,24 @@ label story_a_to_school:
         "Get frustrated":
             jump story_a_frustrated
 
+label story_a_frustrated
+    scene ca_camila
+    show ca_teacher_outside at left
+    can_main "YOU DON’T GET IT! *slam fist into lockers* "
+    camila "*yelps*"
+    can_main "(thinking) oh no I didn’t mean it… I--"
+    teacher "Stop right there, young lady! You’re going to the principal’s office"
+        menu:
+            "Go to principal’s office":
+                jump story_a_principal
+
 label story_a_brush_off:
     can_main "Maybe…"
     jump story_a_class
 
 label story_a_fake_sick:
+    scene ca_morning
+    show ca_mom at right
     "*Mom comes in the room worried*"
     can_mom "Hi honey, why aren’t you getting ready for school?"
     can_main "I’m not feeling well. I think I’m gonna stay home today"
@@ -134,11 +147,15 @@ label story_a_fake_sick:
         "Stay in bed":
             jump story_a_stay_bed
 
+
+
 label story_a_stay_bed:
+    scene ca_morning
     can_main "{i}This is never gonna get any better, why would I even bother? Ughhhhh I’m going back to sleep…{/i}"
     jump end
 
 label story_a_principal:
+    scene ca_principal
     Principal "We do not allow violence at this school young lady. Please take a seat while I call your parents."
     can_main "*under her breath* 'You mean parent…'"
     menu:
@@ -146,6 +163,7 @@ label story_a_principal:
             jump story_a_ditch_school
 
 label story_a_class:
+    scene ca_teacher
     "*Bell rings again* (Player packs up and starts to leave)"
     teacher "Excuse me, I need to talk to you. Can you please stay after class?"
     teacher "You’re last test score is very low. You told me you were getting treatment and that everything was under control. I have been very lenient with you, but it seems like you are not improving."
@@ -160,6 +178,7 @@ label story_a_class:
             jump story_a_gc
 
 label story_a_gc:
+    scene ca_guidance
     guidance_counselor "So, what’s going on? It’s been awhile since I last saw you."
     can_main "It’s nothing really."
     guidance_counselor "Well there must be some reason why you’re here."
@@ -176,6 +195,8 @@ label story_a_gc:
             jump story_a_gc
 
 label story_a_home:
+    scene black
+    show ca_mom
     can_mom "Honey, what happened? The school called and told me you were having some trouble. Is there anything I can do to help?"
     can_main "I’m fine."
     can_mom "You know you can talk to me about anything. I love you."
@@ -187,6 +208,7 @@ label story_a_home:
             jump story_a_therapy
 
 label story_a_ditch_school:
+    scene ca_ditching
     can_main "*thinking* I can’t do this anymore I need to go somewhere"
     menu:
         "Go home":
@@ -195,6 +217,7 @@ label story_a_ditch_school:
             jump story_a_therapy
 
 label story_a_coffee_shop:
+    scene ca_coffee
     can_main "(thinking) *Sigh* I love this place… Maybe I should order something that will calm me down."
     menu:
         "Order a cool espresso drink":
@@ -204,6 +227,7 @@ label story_a_coffee_shop:
 
 
 label story_a_coffee_shop_next:
+    scene ca_coffee
     can_main "(thinking) *Sighing* Ahhh that’s kind of better… Ugh I don’t know what to do. I’m so all over the place, I need to organize my thoughts."
     menu:
         "Listen to music and reflect":
@@ -212,6 +236,7 @@ label story_a_coffee_shop_next:
             jump story_a_journal
 
 label story_a_music:
+    scene ca_coffee
     can_main "(thinking) This isn’t working…"
     menu:
         "Write in journal":
@@ -219,6 +244,7 @@ label story_a_music:
 
 
 label story_a_journal:
+    scene ca_journal
     can_main "(thinking) Well she told me to keep a journal months ago and I’ve just been carrying this empty one around in my bag… time to use it. I don’t really see how it could help but there’s no harm in trying I guess…"
     "(writes) Dear Diary (scratch out)"
     "..."
