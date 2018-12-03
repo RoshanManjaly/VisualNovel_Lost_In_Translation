@@ -63,5 +63,9 @@ log.txt
 traceback.txt
 project.json
 game/cache/*
-game/cache/bytecode.rpyb
+game/fonts/*
+game/gui/*
 game/saves/*
+game/tl/*
+
+game/tl/None/common.rpymc
