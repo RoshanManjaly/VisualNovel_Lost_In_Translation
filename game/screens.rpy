@@ -974,7 +974,7 @@ screen help():
 
     tag menu
 
-    default device = "keyboard"
+    default device = "mouse"
 
     use game_menu(_("Help"), scroll="viewport"):
 
@@ -1098,6 +1098,31 @@ screen gamepad_help():
 
     textbutton _("Calibrate") action GamepadCalibrate()
 
+screen custom_help_screen():
+
+    hbox:
+        label _("Left Click or Enter")
+        text _("Advances dialogue and activates the interface.")
+
+    hbox:
+        label _("Right Click or Escape")
+        text _("Accesses the game menu.")
+
+    hbox:
+        label _("Arrow Keys")
+        text _("Navigate the interface.")
+
+    hbox:
+        label "H"
+        text _("Hides the user interface.")
+
+    hbox:
+        label "S"
+        text _("Takes a screenshot.")
+
+    hbox:
+        label "V"
+        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
 
 style help_button is gui_button
 style help_button_text is gui_button_text

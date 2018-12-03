@@ -3,7 +3,13 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-## Canada Characters
+## Canadian Characters
+define can_main   = Character("You")
+define camila   = Character("Camila")
+define teacher   = Character("Teacher")
+define can_mom   = Character("Mom")
+define guidance_counselor   = Character("Guidance Councelor")
+define therapist   = Character("Therapist")
 
 ## Japan Characters
 define yuuki = Character("Ohno Yuuki")
@@ -17,6 +23,8 @@ define brother   = Character("Brother")
 define pak_main   = Character("You")
 
 
+
+
 # The game starts here.
 
 # story_a = set in Canada
@@ -27,19 +35,18 @@ define pak_main   = Character("You")
 
 
 label start:
+    scene main_menu
     "Where would you like travel to?"
 
     menu:
-        "Canada":
-            jump story_a
-
-        "Japan":
-            jump story_b
-
         "Pakistan":
             jump story_c
-
+        "Japan":
+            jump story_b
+        "Canada":
+            jump story_a
 label end:
+    scene main_menu
     "Play Again?"
 
     menu:
@@ -50,13 +57,147 @@ label end:
             return
 
 
-
+###################### Canada Story Start
 label story_a:
-        "Canada Story in Progress"
+    can_main "Ugh it's morning…"
+    menu:
+        "Go to school":
+            jump story_a_to_school
+        "Fake being sick":
+            jump story_a_fake_sick
 
-        menu:
-            "Return to Selection Menu":
-                jump start
+
+label story_a_to_school:
+    can_main "Oh, hey, Camila."
+    camila "Hey girl! Why so glum?"
+    can_main "It’s nothing… just not feeling it today."
+    camila "Ahhh it is probably just transition stuff. It’s still fairly new for you, right?"
+    can_main "Yeah, but I don’t think it’s that. It feels like it’s different."
+    camila "Eh, I wouldn’t worry about it. You should consider yourself lucky that we are one of the most progressive countries or you’d be struggling a lot more. Think about all the other people like you in other countries who aren’t getting the chances you have… it’s just sad."
+    can_main "Well thanks that definitely helped me feel better…"
+    camila "You know what I mean. Just be grateful! I’m sure you’ll feel better, soon or something."
+    "*Bell Rings*"
+    camila "Oh I got to get to class! See you later?"
+    menu:
+        "Brush it off":
+            jump story_a_brush_off
+        "Get frustrated":
+            jump story_a_frustrated
+
+label story_a_brush_off:
+    can_main "Maybe…"
+    jump story_a_class
+
+label story_a_fake_sick:
+    "*Mom comes in the room worried*"
+    can_mom "Hi honey, why aren’t you getting ready for school?"
+    can_main "I’m not feeling well. I think I’m gonna stay home today"
+    can_mom "You sure? I think you look fine. How about you start getting ready and see how you feel? I’m sure you’ll feel better. It’s not good for you to miss this much school."
+    menu:
+        "Go to school":
+            jump story_a_to_school
+        "Stay in bed":
+            jump story_a_stay_bed
+
+label story_a_stay_bed:
+    can_main "*thinking* This is never gonna get any better, why would I even bother? Ughhhhh I’m going back to sleep… "
+    jump end
+
+label story_a_principal:
+    Principal "We do not allow violence at this school young lady. Please take a seat while I call your parents."
+    can_main "*under her breath* 'You mean parent…'"
+    menu:
+        "Leave the office and ditch school":
+            jump story_a_ditch_school
+
+label story_a_class:
+    "*Bell rings again* (Player packs up and starts to leave)"
+    teacher "Excuse me, I need to talk to you. Can you please stay after class?"
+    teacher "You’re last test score is very low. You told me you were getting treatment and that everything was under control. I have been very lenient with you, but it seems like you are not improving."
+    can_main "I don’t have everything under control."
+    teacher "Maybe you should see the guidance counselor, he can provide more help."
+    can_main "He hasn’t really helped me in the past. I think this is a different problem."
+    teacher "Well you have to do something because you’re not going to be able to pass if you keep this up."
+    menu:
+        "Ditch school ('Fuck this.')":
+            jump story_a_ditch_school
+        "Go to guidance counselor":
+            jump story_a_gc
+
+label story_a_gc:
+    guidance_counselor "So, what’s going on? It’s been awhile since I last saw you."
+    can_main "It’s nothing really."
+    guidance_counselor "Well there must be some reason why you’re here."
+    can_main "I was told to come here because I’m still not doing well in class. I don’t think I need to be here."
+    guidance_counselor "Okay well I can’t only help you if you want to be helped. Here are some pamphlets that might be useful for you."
+    "*pamphlets like 'How get through your transition' 'How to make your treatment team' etc.*"
+    can_main "Wow thanks… I don’t think it’s related to my transition though."
+    guidance_counselor "It probably is, it may just not seem like it. Give the pamphlets a try. You never know."
+    can_main "Sure."
+    menu:
+        "Ditch school":
+            jump story_a_ditch_school
+        "Go home to worried mom":
+            jump story_a_gc
+
+label story_a_home:
+    can_mom "Honey, what happened? The school called and told me you were having some trouble. Is there anything I can do to help?"
+    can_main "I’m fine."
+    can_mom "You know you can talk to me about anything. I love you."
+    can_main "I don’t need your help, thank you… Maybe you should focus on yourself…"
+    can_mom "What does that mean?!?!"
+    can_main "Nothing. I gotta go."
+    menu:
+        "Go to therapy":
+            jump story_a_therapy
+
+label story_a_ditch_school:
+    can_main "*thinking* I can’t do this anymore I need to go somewhere"
+    menu:
+        "Go home":
+            jump story_a_therapy
+        "Go to the town (coffee shop)":
+            jump story_a_therapy
+
+label story_a_coffee_shop:
+    can_main "(thinking) *Sigh* I love this place… Maybe I should order something that will calm me down."
+    menu:
+        "Order a cool espresso drink":
+            jump story_a_coffee_shop_next
+        "Order a black coffee":
+            jump story_a_coffee_shop_next
+
+
+label story_a_coffee_shop_next:
+    can_main "(thinking) *Sighing* Ahhh that’s kind of better… Ugh I don’t know what to do. I’m so all over the place, I need to organize my thoughts."
+    menu:
+        "Listen to music and reflect":
+            jump story_a_music
+        "Write in journal":
+            jump story_a_journal
+
+label story_a_music:
+    can_main "(thinking) This isn’t working…"
+    menu:
+        "Write in journal":
+            jump story_a_journal
+
+
+label story_a_journal:
+    can_main "(thinking) Well she told me to keep a journal months ago and I’ve just been carrying this empty one around in my bag… time to use it. I don’t really see how it could help but there’s no harm in trying I guess…"
+    "(writes) Dear Diary (scratch out)"
+    "..."
+    "(thinking) No that’s not my style…"
+    "(writes) I don’t really know what has been going on with me, but I guess that’s why I’m writing this…"
+    jump end
+
+
+
+###################### Canada Story End
+
+
+
+
 
 ###################### Japan Story Start
 label story_b:
@@ -305,8 +446,9 @@ label story_b_continue_home:
     jump end
 ###################### Japan Story End
 
+###################### Pakistan Story Start
 label story_c:
-    show bedroom with dissolve
+    scene bedroom with dissolve
     "Wake Up"
 
     menu:
@@ -316,7 +458,7 @@ label story_c:
             jump story_c_morning_routine
 
 label story_c_in_bed:
-    show bedroom with dissolve
+    scene bedroom with dissolve
     "You reach over and grab your phone"
 
     menu:
@@ -326,7 +468,7 @@ label story_c_in_bed:
             jump story_c_binder
 
 label story_c_morning_routine:
-    show bedroom with dissolve
+    scene bedroom with dissolve
     "Your rustling wakes up Aasim"
 
     "You kiss him on the cheek and roll out of bed. You pick up the ring from the bedside table"
@@ -339,9 +481,8 @@ label story_c_morning_routine:
 
     jump story_c_late
 
-
 label story_c_news:
-    show news with dissolve
+    scene news with dissolve
     "Article: Once ostracized now Pakistan: Transgender people are running for Parliament"
 
     "Hmmm.... maybe I should vote this year. When are Elections again?"
@@ -369,7 +510,6 @@ label story_c_calendar:
     "You look over at the clock for the time. You're late!!"
 
     jump story_c_late
-
 
 label story_c_binder:
     show tinder with dissolve
@@ -442,12 +582,13 @@ label story_c_rikshaw:
     show rickshaw with dissolve
     "You walk to the street corner and flag one down. He takes you home and takes you home and you pay in 20 rupees. He says thank you"
     "No words other than that"
-
+    jump story_c_home
 
 label story_c_uber:
     show uberpak with dissolve
     "You walk outside and she pick you up. You say thank you and get out"
     "No words other than that"
+    jump story_c_home
 
 label story_c_home:
     "You stroll into your home and take a seat on the couch"
@@ -457,7 +598,6 @@ label story_c_home:
             jump story_c_tv
         "Call your brother":
             jump story_c_brother
-
 
 label story_c_tv:
     show marvia with dissolve
@@ -476,7 +616,6 @@ label story_c_tv_drama:
     #Story is finished
 
     jump end
-
 
 label story_c_brother:
     show bhai with dissolve
@@ -498,5 +637,12 @@ label story_c_brother:
     "'How did I get it better than him?' You think to yourself"
     "Might as well watch some TV"
     jump story_c_tv_drama
+###################### Pakistan Story End
+
+
+
+
+
+
 
 ### End of Code
