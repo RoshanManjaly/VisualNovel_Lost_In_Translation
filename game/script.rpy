@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -22,6 +22,9 @@ define aasim   = Character("Aasim")
 define brother   = Character("Brother")
 define pak_main   = Character("You")
 
+
+
+
 # The game starts here.
 
 # story_a = set in Canada
@@ -42,7 +45,6 @@ label start:
             jump story_b
         "Canada":
             jump story_a
-
 label end:
     scene main_menu
     "Play Again?"
@@ -98,7 +100,7 @@ label story_a_fake_sick:
             jump story_a_stay_bed
 
 label story_a_stay_bed:
-    can_main "(thinking) This is never gonna get any better, why would I even bother? Ughhhhh I’m going back to sleep… "
+    can_main "*thinking* This is never gonna get any better, why would I even bother? Ughhhhh I’m going back to sleep… "
     jump end
 
 label story_a_principal:
@@ -150,7 +152,7 @@ label story_a_home:
             jump story_a_therapy
 
 label story_a_ditch_school:
-    can_main "(thinking) I can’t do this anymore I need to go somewhere"
+    can_main "*thinking* I can’t do this anymore I need to go somewhere"
     menu:
         "Go home":
             jump story_a_therapy
@@ -244,8 +246,7 @@ label story_b:
             jump story_b_werent_listening
 
 label story_b_reassure:
-    yuuki "{a=http://lang-8.com/725244/journals/199182171541683591437838792131877435706}{i}Ganbarimasu.{/i}{/a} {image=jpGanbarimasu.png}"
-
+    yuuki "{a=http://lang-8.com/725244/journals/199182171541683591437838792131877435706}{i}Ganbarimasu.{/i}{/a}"
 
     jap_mom "That's our Yuuki!"
 
@@ -448,7 +449,7 @@ label story_b_continue_home:
 ###################### Pakistan Story Start
 label story_c:
     scene bedroom with dissolve
-    "Wake Up"
+    "*wake up*"
 
     menu:
         "Stay in bed a little longer?":
@@ -458,7 +459,7 @@ label story_c:
 
 label story_c_in_bed:
     scene bedroom with dissolve
-    "You reach over and grab your phone"
+    "*grab your phone*"
 
     menu:
         "News?":
@@ -468,7 +469,8 @@ label story_c_in_bed:
 
 label story_c_morning_routine:
     scene bedroom with dissolve
-    "Your rustling wakes up Aasim"
+    "*rustling*"
+    "*Aasim wakes up*"
 
     "You kiss him on the cheek and roll out of bed. You pick up the ring from the bedside table"
 
@@ -482,14 +484,14 @@ label story_c_morning_routine:
 
 label story_c_news:
     scene news with dissolve
-    "Article: Once ostracized now Pakistan: Transgender people are running for Parliament"
+    "Once ostracized now Pakistan: Transgender people are running for Parliament"
 
-    "Hmmm.... maybe I should vote this year. When are Elections again?"
+    "{i}Hmmm.... maybe I should vote this year. When are Elections again?{/i}"
 
-    "Opens Calendar App"
+    "*Opens Calendar App*"
 
     #Calendar App Opening screen switch
-    show calendar1 with dissolve
+    scene calendar1 with dissolve
     "Today's Date: July 13th, 2018"
     "Election Day: July 25th, 2018"
     "Dr. Rahman comes for shots: July 28th, 2018"
@@ -504,7 +506,7 @@ label story_c_calendar:
     scene calendar2 with dissolve
     "Right ... Hajj ... "
 
-    "Hopefully things will change in the Saudi Government soon, insha'Allah "
+    "{i}Hopefully things will change in the Saudi Government soon, insha'Allah{/i}"
 
     "You look over at the clock for the time. You're late!!"
 
@@ -514,9 +516,9 @@ label story_c_binder:
     scene tinder with dissolve
     "Left, Left, Lef....oooo...."
 
-    "nope. jk. He's too pendu"
+    "{i}nope. jk. He's too pendu{/i}"
 
-    "nothing good today"
+    "{i}nothing good today{/i}"
 
     menu:
         "Keep Swiping?":
@@ -528,7 +530,7 @@ label story_c_binder_repeating:
     scene tinder with dissolve
     "Left, Left, Left"
 
-    "Still nothing good today"
+    "{i}Still nothing good today{/i}"
 
     menu:
         "Keep Swiping?":
@@ -538,8 +540,7 @@ label story_c_binder_repeating:
 
 label story_c_late:
     scene makeup with dissolve
-    "You run to the bathroom and shart putting on your make up"
-
+    "You run to the bathroom and start putting on your make up"
 
     "You wear the salwar kameez that you bought last weekend and head out. You wave hello to the chowkidar and head down the road"
 
@@ -552,15 +553,16 @@ label story_c_late:
 label story_c_back_road:
     scene backroad with dissolve
     "You walk through some alleys. On your way, you say hello to some children, give 100 rupees to the woman on the street corner (even though you know it goes straight to the guru - 100 rupees for a blessing isnt too bad of a deal), and skip over some puddles"
-    "Nothing too out of the ordinary"
+    "{i}Nothing too out of the ordinary{/i}"
     jump story_c_arrived
 
 label story_c_main_road:
     scene mainroad with dissolve
     "Hey! Beautiful gay!"
     "You look at the standing mama"
-    "He burns away, 'Family always has your back', you say sarcastically under your breath"
-    "Hmm... maybe you should call your brother today. Although it is his responsiblity"
+    "He turns away,"
+    pak_main "'Family always has your back', you say sarcastically under your breath"
+    "{i}Hmm... maybe you should call your brother today. Although it is his responsiblity{/i}"
     jump story_c_arrived
 
 label story_c_arrived:
@@ -568,10 +570,10 @@ label story_c_arrived:
     " 'Government of Pakistan' ... You're Here"
     "You hand the security guard your I.D. He looks you up and down and looks like he’s about to raise an eyebrow. But he doesn’t. You’re let in without exchanging a word"
     "Normal day at work. Paper pushing, phone checking, some staring"
-    "Who actually cares about other people’s takes"
+    "{i}Who actually cares about other people’s taxes{/i}"
 
     scene clock3pm with dissolve
-    "The clock hits 3pm. Time to check out and you're feeling lazy"
+    "The clock hits 3pm. Time to check out. You're feeling lazy"
     menu:
         "Rikshaw":
             jump story_c_rikshaw
@@ -580,13 +582,13 @@ label story_c_arrived:
 
 label story_c_rikshaw:
     scene rickshaw with dissolve
-    "You walk to the street corner and flag one down. He takes you home and takes you home and you pay in 20 rupees. He says thank you"
+    "You walk to the street corner and flag one down. He takes you home and you pay in 20 rupees. He says thank you"
     "No words other than that"
     jump story_c_home
 
 label story_c_uber:
-    show uberpak with dissolve
-    "You walk outside and she pick you up. You say thank you and get out"
+    scene uberpak with dissolve
+    "You walk outside and she picks you up. You say thank you and get out"
     "No words other than that"
     jump story_c_home
 
@@ -600,28 +602,28 @@ label story_c_home:
             jump story_c_brother
 
 label story_c_tv:
-    show marvia with dissolve
+    scene marvia with dissolve
     "Its Marvia Malik on Kohenoon News. She's talking about village gange that killed two men suspected of being gay"
 
     menu:
         "Switch to Drama Network":
             jump story_c_tv_drama
-        "Call your brother":
+        "Uhhh... you should definitely call your brother":
             jump story_c_brother
 
 label story_c_tv_drama:
-    show drama with dissolve
-    "How can a saas be so cruel? You think to yourself."
-    "You enjoy your lazy day. You watch T.V. till its time to prep dinner. You wash your dishes, do your night prayers, and head to bed."
+    scene drama with dissolve
+    "{i}How can a saas be so cruel!?{/i}"
+    "You enjoy your lazy day. You watch T.V. till it's time to prep dinner. You wash your dishes, do your night prayers, and head to bed."
     #Story is finished
 
     jump end
 
 label story_c_brother:
-    show bhai with dissolve
-    pak_main "Its been a week! You don't have to check up on your little sister?"
+    scene bhai with dissolve
+    pak_main "It's been a week! You don't have to check up on your little sister?"
     brother "I'm sorry"
-    pak_main "Fine. I guess I should be the one chekcin gup on you. You're okay?"
+    pak_main "Fine. I guess I should be the one chekcing up on you. You're okay?"
     brother "Yeah, fine"
     pak_main "How's Kareem?"
     brother "We broke up?"
