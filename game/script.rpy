@@ -9,7 +9,7 @@ define camila   = Character("Camila")
 define teacher   = Character("Teacher")
 define Principal   = Character("Principal")
 define can_mom   = Character("Mom")
-define guidance_counselor   = Character("Guidance Councelor")
+define guidance_counselor   = Character("Guidance Counselor")
 define therapist   = Character("Therapist")
 
 ## Japan Characters
@@ -158,27 +158,26 @@ label story_a_principal:
 
 label story_a_class:
     scene ca_teacher
-    "*Bell rings again* (Player packs up and starts to leave)"
+    "*Bell rings again*"
     teacher "Excuse me, I need to talk to you. Can you please stay after class?"
-    teacher "You’re last test score is very low. You told me you were getting treatment and that everything was under control. I have been very lenient with you, but it seems like you are not improving."
+    teacher "Your last test score is very low. You told me you were getting treatment and that everything was under control. I have been very lenient with you, but it seems like you are not improving."
     can_main "I don’t have everything under control."
     teacher "Maybe you should see the guidance counselor, he can provide more help."
-    can_main "He hasn’t really helped me in the past. I think this is a different problem."
+    can_main "He hasn’t really helped me in the past. I think this is a different problem ..."
     teacher "Well you have to do something because you’re not going to be able to pass if you keep this up."
     menu:
-        "Ditch school ('Fuck this.')":
+        "Ditch school":
             jump story_a_ditch_school
         "Go to guidance counselor":
             jump story_a_gc
 
 label story_a_gc:
     scene ca_guidance
-    guidance_counselor "So, what’s going on? It’s been awhile since I last saw you."
+    guidance_counselor "So, what’s going on? It’s been a while since I last saw you."
     can_main "It’s nothing really."
     guidance_counselor "Well there must be some reason why you’re here."
     can_main "I was told to come here because I’m still not doing well in class. I don’t think I need to be here."
-    guidance_counselor "Okay well I can’t only help you if you want to be helped. Here are some pamphlets that might be useful for you."
-    "*pamphlets like 'How get through your transition' 'How to make your treatment team' etc.*"
+    guidance_counselor "Okay, well I can only help you if you want to be helped. Here are some pamphlets that might be useful for you."
     can_main "Wow thanks… I don’t think it’s related to my transition though."
     guidance_counselor "It probably is, it may just not seem like it. Give the pamphlets a try. You never know."
     can_main "Sure."
@@ -186,7 +185,7 @@ label story_a_gc:
         "Ditch school":
             jump story_a_ditch_school
         "Go home to worried mom":
-            jump story_a_gc
+            jump story_a_home
 
 label story_a_home:
     scene black
@@ -201,16 +200,25 @@ label story_a_home:
         "Go to therapy":
             jump story_a_therapy
 
+label story_a_therapy:
+    therapist "Good afternoon! How have you been?"
+    can_main "Mostly good…"
+    therapist "Well that’s good to hear! Is there anything that you want to talk about?"
+    can_main "Actually... it’s not good. I haven’t been feeling right for a while now, but everyone keeps telling me that it probably has to do with my transition. I don’t think it does though… I can just tell."
+    therapist "Hmmmm. It’s completely possible to have other issues, you’re only human. Let’s talk this out and see what we can do…"
+    jump end
+
+
 label story_a_ditch_school:
     scene ca_ditching
-    can_main "*thinking* I can’t do this anymore I need to go somewhere"
+    can_main "{i}thinking I can’t do this anymore I need to go somewhere {\i}"
     menu:
         "Go home":
             jump story_a_home
         "Go to the town (coffee shop)":
-            jump story_a_therapy
+            jump story_a_coffee
 
-label story_a_therapy:
+label story_a_coffee:
     scene ca_coffee
     can_main "{i} *Sigh* I love this place… Maybe I should order something that will calm me down.{\i}"
     menu:
