@@ -248,7 +248,8 @@ label story_a_music:
 label story_a_journal:
     scene ca_journal
     can_main "{i} Well she told me to keep a journal months ago and I’ve just been carrying this empty one around in my bag… time to use it. I don’t really see how it could help but there’s no harm in trying I guess…{\i}"
-    "(writes) Dear Diary (scratch out)"
+    "*writes* Dear Diary"
+    "*scratch out*"
     "..."
     "{i}No that’s not my style…{/i}"
     "*writing* I don’t really know what has been going on with me, but I guess that’s why I’m writing this…"
