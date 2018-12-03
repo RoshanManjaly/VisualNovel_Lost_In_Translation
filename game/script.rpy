@@ -58,6 +58,7 @@ label end:
 
 
 ###################### Canada Story Start
+
 label story_a:
     can_main "Ugh it's morning…"
     menu:
@@ -203,10 +204,10 @@ label story_a_journal:
 label story_b:
 
     # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
+    # add a file (named either "jp bg room.png" or "jp bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene jp bg room
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -214,8 +215,8 @@ label story_b:
 
     # These display lines of dialogue.
 
-    show okaasan happy at left
-    show otousan happy at right
+    show jp okaasan happy at left
+    show jp otousan happy at right
 
     jap_mom "You decided to spend your prime in Tokyo and you're telling me that you can't find any halfway decent eligible bachelors?"
 
@@ -231,7 +232,7 @@ label story_b:
 
     jap_mom "Yuuki-chan, are you listening? Tell your parents they won't die before seeing their grandchildren."
 
-    scene bg room
+    scene jp bg room
 
     menu:
         "How do I respond?"
@@ -283,8 +284,8 @@ label story_b_end_of_call:
 
     # Play sound of call disconnecting
 
-    hide okaasan
-    hide otousan
+    hide jp okaasan
+    hide jp otousan
 
     "I sigh in mild relief. Another uneventful conversation with my parents, another day I remain in their good graces as their only and darling daughter. I keep telling myself that one day, one of these days, I'll tell them about my gender troubles and happenings, but there's never seems like a 'right' time."
 
@@ -314,7 +315,7 @@ label story_b_end_of_call:
 
     "A couple of hours pass like this, and then I've found myself dismissing my last class of the day."
 
-    show bg hallway with dissolve
+    show jp bg hallway with dissolve
 
     "As a new faculty member, I haven't yet been asked to sponsor any after-school club, so I go home a little earlier than other teachers."
 
@@ -345,7 +346,7 @@ label story_b_head_poke:
 
     yuuki "Sato-sensei! How are you?"
 
-    show ayako happy
+    show jp ayako happy
 
     ayako "I'm well. How are you, Ohno-sensei?"
 
@@ -415,7 +416,7 @@ label story_b_troubles_with_parents:
     jump story_b_continue_home
 
 label story_b_continue_home:
-    show bg train with dissolve
+    show jp bg train with dissolve
 
     # moving train sounds
 
@@ -439,7 +440,7 @@ label story_b_continue_home:
 
     "I look out the window and watch the city pass by. I let myself fall asleep, telling myself to be content with what I have. As long as I don't make too much of a splash around me, I'll be fine."
 
-    hide bg train with dissolve
+    hide jp bg train with dissolve
 
     # This ends the game.
 
@@ -448,7 +449,7 @@ label story_b_continue_home:
 
 ###################### Pakistan Story Start
 label story_c:
-    scene bedroom with dissolve
+    scene pk bedroom with dissolve
     "*wake up*"
 
     menu:
@@ -458,7 +459,7 @@ label story_c:
             jump story_c_morning_routine
 
 label story_c_in_bed:
-    scene bedroom with dissolve
+    scene pk bedroom with dissolve
     "*grab your phone*"
 
     menu:
@@ -468,7 +469,7 @@ label story_c_in_bed:
             jump story_c_binder
 
 label story_c_morning_routine:
-    scene bedroom with dissolve
+    scene pk bedroom with dissolve
     "*rustling*"
     "*Aasim wakes up*"
 
@@ -483,15 +484,15 @@ label story_c_morning_routine:
     jump story_c_late
 
 label story_c_news:
-    scene news with dissolve
-    "Once ostracized now Pakistani Transgender people are running for Parliament"
+    scene pk news with dissolve
+    "Once ostracized now Pakistan: Transgender people are running for Parliament"
 
     "{i}Hmmm.... maybe I should vote this year. When are Elections again?{/i}"
 
     "*Opens Calendar App*"
 
     #Calendar App Opening screen switch
-    scene calendar1 with dissolve
+    scene pk calendar1 with dissolve
     "Today's Date: July 13th, 2018"
     "Election Day: July 25th, 2018"
     "Dr. Rahman comes for shots: July 28th, 2018"
@@ -503,7 +504,7 @@ label story_c_news:
             jump story_c_binder
 
 label story_c_calendar:
-    scene calendar2 with dissolve
+    scene pk calendar2 with dissolve
     "Right ... Hajj ... "
 
     "{i}Hopefully things will change in the Saudi Government soon, insha'Allah{/i}"
@@ -513,7 +514,7 @@ label story_c_calendar:
     jump story_c_late
 
 label story_c_binder:
-    scene tinder with dissolve
+    scene pk tinder with dissolve
     "Left, Left, Lef....oooo...."
 
     "{i}nope. jk. He's too pendu{/i}"
@@ -527,19 +528,23 @@ label story_c_binder:
             jump story_c_news
 
 label story_c_binder_repeating:
-    scene tinder with dissolve
+    scene pk tinder with dissolve
     "Left, Left, Left"
 
     "{i}Still nothing good today{/i}"
 
-    menu:
-        "Keep Swiping?":
-            jump story_c_binder_repeating
-        "News!":
-            jump story_c_news
+    jump story_c_your_late
+
+
+label story_c_your_late:
+    "You're Late"
+
+    jump story_c_late
+
+
 
 label story_c_late:
-    scene makeup with dissolve
+    scene pk makeup with dissolve
     "You run to the bathroom and start putting on your make up"
 
     "You wear the salwar kameez that you bought last weekend and head out. You wave hello to the chowkidar and head down the road"
@@ -551,13 +556,13 @@ label story_c_late:
             jump story_c_main_road
 
 label story_c_back_road:
-    scene backroad with dissolve
+    scene pk backroad with dissolve
     "You walk through some alleys. On your way, you say hello to some children, give 100 rupees to the woman on the street corner (even though you know it goes straight to the guru - 100 rupees for a blessing isnt too bad of a deal), and skip over some puddles"
     "{i}Nothing too out of the ordinary{/i}"
     jump story_c_arrived
 
 label story_c_main_road:
-    scene mainroad with dissolve
+    scene pk mainroad with dissolve
     "Hey! Beautiful gay!"
     "You look at the standing mama"
     "He turns away,"
@@ -566,13 +571,13 @@ label story_c_main_road:
     jump story_c_arrived
 
 label story_c_arrived:
-    scene office with dissolve
+    scene pk office with dissolve
     " 'Government of Pakistan' ... You're Here"
     "You hand the security guard your I.D. He looks you up and down and looks like he’s about to raise an eyebrow. But he doesn’t. You’re let in without exchanging a word"
     "Normal day at work. Paper pushing, phone checking, some staring"
     "{i}Who actually cares about other people’s taxes{/i}"
 
-    scene clock3pm with dissolve
+    scene pk clock3pm with dissolve
     "The clock hits 3pm. Time to check out. You're feeling lazy"
     menu:
         "Rikshaw":
@@ -581,13 +586,13 @@ label story_c_arrived:
             jump story_c_uber
 
 label story_c_rikshaw:
-    scene rickshaw with dissolve
+    scene pk rickshaw with dissolve
     "You walk to the street corner and flag one down. He takes you home and you pay in 20 rupees. He says thank you"
     "No words other than that"
     jump story_c_home
 
 label story_c_uber:
-    scene uberpak with dissolve
+    scene pk uberpak with dissolve
     "You walk outside and she picks you up. You say thank you and get out"
     "No words other than that"
     jump story_c_home
@@ -602,7 +607,7 @@ label story_c_home:
             jump story_c_brother
 
 label story_c_tv:
-    scene marvia with dissolve
+    scene pk marvia with dissolve
     "Its Marvia Malik on Kohenoon News. She's talking about village gange that killed two men suspected of being gay"
 
     menu:
@@ -612,7 +617,7 @@ label story_c_tv:
             jump story_c_brother
 
 label story_c_tv_drama:
-    scene drama with dissolve
+    scene pk drama with dissolve
     "{i}How can a saas be so cruel!?{/i}"
     "You enjoy your lazy day. You watch T.V. till it's time to prep dinner. You wash your dishes, do your night prayers, and head to bed."
     #Story is finished
@@ -620,7 +625,7 @@ label story_c_tv_drama:
     jump end
 
 label story_c_brother:
-    scene bhai with dissolve
+    scene pk bhai with dissolve
     pak_main "It's been a week! You don't have to check up on your little sister?"
     brother "I'm sorry"
     pak_main "Fine. I guess I should be the one chekcing up on you. You're okay?"
