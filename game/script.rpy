@@ -241,11 +241,11 @@ label story_b:
 
     "It's been several months since you'd started your schoolteacher position in Tokyo. Your parents haven't gotten over that their 'daughter' is in The Big City, in 'her' twenties, and yet, obstinately single. They mean well, but... sometimes their advice is a tad misguided."
 
-    "{i}For one thing, although I live in an overcrowded city, it's not exactly easy for me to find 'halfway decent eligible' guys interested in me because, well, I'm a guy too.{/i}"
+    "For one thing, although you live in an overcrowded city, it's not exactly easy for you to find 'halfway decent eligible' guys interested in me because, well, you're a guy, too."
 
     jap_mom "Your father and I are only getting older. We only have so many years left to see our grandchildren before we make our exit."
 
-    "{i}It's funny she'd say that, because I'd been thinking of getting sterilized... I don't know that I never want biological children, but Japanese law won't recognize my gender identity unless I become 'unable to reproduce'. {/i}"
+    "It's funny she'd say that, because youd been thinking of getting sterilized... you don't know that you never want biological children, but Japanese law won't recognize your gender identity unless you become 'unable to reproduce'."
 
     jap_mom "Yuuki-chan, are you listening? Tell your parents they won't die before seeing their grandchildren."
 
@@ -260,9 +260,9 @@ label story_b:
             jump story_b_werent_listening
 
 label story_b_reassure:
-    yuuki "Ganbarimasu"
+    yuuki "{a=https://hinative.com/en-US/questions/317088}Ganbarimasu.{/a}"
 
-    jap_mom "That's our Yuuki!"
+    jap_mom "That's our Yuuki-chan!"
 
     yuuki "The thing is—"
 
@@ -287,6 +287,8 @@ label story_b_werent_listening:
 label story_b_end_of_call:
     # Play sound of classroom bell
 
+    play sound "sound/school_bell.mp3"
+
     yuuki "Ah, sorry. It seems like the lunch break is over. We'll talk again next week, yeah?"
 
     jap_dad "Yeah."
@@ -295,9 +297,9 @@ label story_b_end_of_call:
 
     yuuki "Love you."
 
-    # Play sound of call disconnecting
+    play sound "sound/call_end.mp3"
 
-    yuuki "*sigh in mild relief*. {i} Another uneventful conversation with my parents, another day I remain in their good graces as their only and darling daughter. I keep telling myself that one day, one of these days, I'll tell them about my gender troubles and happenings, but there's never seems like a 'right' time. {/i}"
+    yuuki "*sigh in mild relief*. Another uneventful conversation with your parents, another day you remain in their good graces as their only and darling daughter. You keep telling myself that one day, one of these days, you'll tell them about your gender troubles and happenings, but there's never seems like a 'right' time."
     hide ca_home_t
     scene jp room
     "Students shuffle into the classroom, as lethargic as you'd expect high schoolers to be on a Monday afternoon."
@@ -306,11 +308,15 @@ label story_b_end_of_call:
 
     "At the reminder of the upcoming test, the students straighten themselves in their seats a little and put effort into being (or seeming?) alert and attentive."
 
-    "{i} At the start of the school year, during the first couple days of my teaching career, I was a little taken aback that I, someone who'd only so recently been on the other side of the classroom, was being heralded as an 'authority'. {/i}"
+    "At the start of the school year, during the first couple days of my teaching career, you were a little taken aback that you, someone who'd only so recently been on the other side of the classroom, was being heralded as an 'authority'."
 
-    "{i} Now, though, I found myself teasing with my power when I could. The atmosphere change in the classroom at the mention of a test hasn't gotten old, yet.{/i} "
+    "Now, though, you found yourself teasing with my power when you could. The atmosphere change in the classroom at the mention of a test hasn't gotten old, yet "
 
     # chalkboard sounds
+
+    scene jp blackboard
+
+    play sound "sound/chalk.mp3"
 
     "*{i}PRODUCT RULE and QUOTIENT RULE{/i}, are written out on the chalkboard.*"
 
@@ -318,31 +324,32 @@ label story_b_end_of_call:
 
     yuuki "If the two functions f(x) and g(x) are differentiable (i.e. the derivative exist) then the product is differentiable and {font=fonts/Inconsolata-Regular.ttf}(fg)' = f'g + fg'{/font}."
 
-    "*Body Relaxes, continuing to write on the chalkboard while reading the handwriting aloud*"
+    "*Your body relaxes as you continuing to write on the chalkboard while reading your handwriting aloud*"
 
-    yuuki "{i}Math's always comforted me, with its no-nonsense language and problems. In contrast to having to figure out how to conversations with my parents that didn't leave me feeling like I'd somehow betrayed them, calculus problems were a pleasure.{/i}"
+    "Math's always comforted you, with its no-nonsense language and problems. In contrast to having to figure out how to conversations with your parents that didn't leave you feeling like you'd somehow betrayed them, calculus problems were a pleasure."
 
     # more chalkboard sounds
 
-    "*A couple hours pass like this. The last class of the day gets dismissed*"
+    "A couple hours pass, and the last class of the day is dismissed."
+
+    stop sound
 
     show jp hallway with dissolve
 
     "As a new faculty member, you haven't yet been asked to sponsor any after-school club, so you go home a little earlier than other teachers."
-    # "I make my way through the school hallways, idly trying to recall if I have any unexpired food left in the fridge."
 
     "You make my way through the school hallways, idly trying to recall if you have any unexpired food left in the fridge."
 
-    "You pass by Sato Ayako-sensei's classroom, where you find her hunched over at her desk, looking somewhat deep in thought. Sato-sensei is interesting—she's kept trying to make acquaintances with you, despite you reserved nature. {i}Well, 'my reserved nature' isn't quite right...{/i}"
+    "You pass by Sato Ayako-sensei's classroom, where you find her hunched over at her desk, looking somewhat deep in thought. Sato-sensei is interesting—she's kept trying to make acquaintances with you, despite your reserved nature."
 
-    "{i}I wouldn't think of myself as reserved, but, ever since I started transitioning, I found myself unsure of where I fit into society and how to proceed with developing new interpersonal relationships.{/i}"
+    "... Actually, you wouldn't think of yourself as reserved, but, ever since you started transitioning, you found myself unsure of where you fit into society and how to proceed with developing new interpersonal relationships."
 
-    "{i}I look cisgender enough that I don't have to worry about confused stares, but I worry about becoming 'exposed' if I were to let those unfamiliar with my history get close to me. There's no way of knowing how they'd react.{/i}"
+    "You look cisgender enough that you don't have to worry about confused stares, but you worry about becoming 'exposed' if you were to let those unfamiliar with your history get close to you. There's no way of knowing how they'd react."
 
-    "{i}Still, it'd be nice to have a friend in an unfamiliar city...{/}"
+    "Still, it'd be nice to have a friend in an unfamiliar city..."
 
     menu:
-        "Poke  head in the door and say hi to Sato-sensei":
+        "Poke head in the door and say hi to Sato-sensei":
             $ convo_with_sato = True
             jump story_b_head_poke
 
@@ -352,7 +359,7 @@ label story_b_end_of_call:
 
 label story_b_head_poke:
 
-    "{i}it can't hurt to say hi to Sato-sensei{/i}"
+    "{i}It can't hurt to say hi to Sato-sensei{/i}"
 
     yuuki "Sato-sensei! How are you?"
 
@@ -361,10 +368,10 @@ label story_b_head_poke:
     ayako "I'm well. How are you, Ohno-sensei?"
 
     menu:
-        "Tell her your also well.":
+        "Tell her you're also well.":
             jump story_b_do_well
 
-        "Tell her about your troubles with my parents.":
+        "Tell her about your troubles with your parents.":
             jump story_b_troubles_with_parents
 
 label story_b_do_well:
@@ -373,9 +380,9 @@ label story_b_do_well:
 
     ayako "Ah, it's nothing big. It's just that I'm realizing that I'll be spending the holidays alone."
 
-    "{i}I wonder if she's telling you this as a subtle hint to invite her out for the holidays. I wouldn't mind hanging out with Sato-sensei, but it's hard to feel 'right' hanging out with anyone while being a very closeted trans man.{/i}"
+    "You wonder if she's telling you this as a subtle hint to invite her out for the holidays. You wouldn't mind hanging out with Sato-sensei, but it's hard to feel 'right' hanging out with anyone while being a heavily closeted trans man."
 
-    "{i}I worry about giving off the wrong messages and getting into an uncomfortable situation.{/i}"
+    "You worry about giving off the wrong messages and getting into an uncomfortable situation."
 
     yuuki "Well, getting some well-deserved peace and quiet to yourself sounds like an excellent vacation."
 
@@ -387,7 +394,7 @@ label story_b_do_well:
 
     ayako "I have some paperwork to fill out, so we should catch up later."
 
-    "*I nod and walk back into the hallway.*"
+    "You nod and walk back into the hallway."
 
     jump story_b_continue_home
 
@@ -398,13 +405,13 @@ label story_b_troubles_with_parents:
 
     yuuki "It's nothing big! They just keep pushing me to get a girlfriend; they don't like how much of a loner I seem to be."
 
-    "You cringe slightly at your use of 'girlfriend', when your parents would probably faint if they'd heard I had one."
+    "You cringe slightly at your use of 'girlfriend', when your parents would probably faint if they'd heard you had one."
 
     ayako "You {i}are{/i} a bit of a loner. Maybe a girlfriend would get you to go out more!"
 
     yuuki "Yeah, maybe."
 
-    "{i}I wonder if I'd be able to find a partner who'd push me out of the protective shell I've formed for myself—I sure hope I do.{/i}"
+    "You wonder if you'll be able to find a partner who'll push you out of the protective shell you've created for yourself—you hope you do.{/i}"
 
     "Sato-sensei averts her glance from you to her desk."
 
@@ -414,7 +421,7 @@ label story_b_troubles_with_parents:
 
     ayako "Would you like to come along with me?"
 
-    "{i}Sato-sensei is a nice person, and I'm sure I'd have a great time with her but without thinking I immediately respond:{/i}"
+    "Sato-sensei is a nice person, and you're sure you'd have a great time with her but without thinking you immediately respond:"
 
     yuuki "Sorry, I've already done my holiday shopping and my upcoming schedule is a bit hectic, right now."
 
@@ -432,28 +439,26 @@ label story_b_continue_home:
     # moving train sounds
 
     if convo_with_sato:
-        "You're on the train home, leaning against the window and thinking back to your conversations with my parents and with Sato-sensei."
+        "You're on the train home, leaning against the window and thinking back to your conversations with your parents and with Sato-sensei."
 
     else:
-        "You're on the train home, leaning against the window and thinking back to your conversation with my parents."
+        "You're on the train home, leaning against the window and thinking back to your conversation with your parents."
 
-    "{i}I'm happier than I've ever been, living my life as a man rather than as a woman. However, I'm also more isolated than I've ever been. It's hard to figure out what face to put on toward different people in my life.{/i}"
+    "You're happier than you've ever been, living your life as a man rather than as a woman. However, you're also more isolated than you've ever been. It's hard to figure out what face to put on toward different people in your life."
 
-    "You look through my Twitter feed, hoping to find some meme or another that'll make you laugh."
+    "You look through my Twitter feed, hoping to find some meme or another to make you laugh."
 
     "Instead, you come across a tweet from Ebina City Council member Tsuruhashi Masumi, in response to Asahi Shimbun's report on an attitude survey regarding same sex marriage:"
 
-    "'If abnormal people increase, human beings will become extinct. … Homosexuality is abnormal. Media should be more responsible than to report abnormal activities.'"
+    "'If abnormal people increase, human beings will become extinct... Homosexuality is abnormal. Media should be more responsible than to report abnormal activities.'"
 
-    # "'{a=https://www.tofugu.com/japan/conformity-in-japan/}The nail that sticks out gets hammered down{\a},' as the saying goes."
+    "'{a=https://www.tofugu.com/japan/conformity-in-japan/}The nail that sticks out gets hammered down{\a},' as the saying goes."
 
-    "{i}The nail that sticks out gets hammered down, as the saying goes. {/i}"
+    "Would you be regarded as a 'homosexual' in Tsuruhashi-san's eyes, when you identify as a man and are interested in women? Probably, you think, resolving not to dwell on the subject."
 
-    "{i}Would I be regarded as a 'homosexual' in Tsuruhashi-san's eyes, when I identify as a man and am interested in women? Probably, I think, resolving not to further dwell on the subject.{/i}"
+    "You look out the window and watch the city pass by. You let yourself fall asleep, telling yourself to be content with what you have."
 
-    "You look out the window and watch the city pass by. You let yourself fall asleep, telling yourself to be content with what you have"
-
-    "{i}As long as I don't make too much of a splash around me, I'll be fine.{/i}"
+    "As long as you don't make too much of a splash around you, you'll be fine... probably."
 
     hide jp train with dissolve
 
