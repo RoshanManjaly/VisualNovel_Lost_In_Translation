@@ -571,7 +571,7 @@ label story_c_back_road:
 label story_c_main_road:
     scene pk mainroad with dissolve
     "'Hey! Beautiful gay!'"
-    "You look at the standing mama"
+    "You look at the standing mamu"
     "He turns away"
     pak_main "'Family always has your back,' you say sarcastically under your breath"
     "{i}Hmm... maybe you should call your brother today. Although it is his responsiblity{/i}"
