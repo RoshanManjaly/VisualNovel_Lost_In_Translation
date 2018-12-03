@@ -454,7 +454,7 @@ label story_c:
     menu:
         "Stay in bed a little longer?":
             jump story_c_in_bed
-        "Morning Prayer?":
+        "Brush Teeth?":
             jump story_c_morning_routine
 
 label story_c_in_bed:
@@ -464,7 +464,7 @@ label story_c_in_bed:
     menu:
         "News?":
             jump story_c_news
-        "Binder!":
+        "Tinder!":
             jump story_c_binder
 
 label story_c_morning_routine:
@@ -473,9 +473,9 @@ label story_c_morning_routine:
 
     "You kiss him on the cheek and roll out of bed. You pick up the ring from the bedside table"
 
-    aasim "Can I get you chai?"
+    pak_main "Can I get you chai?"
 
-    pak_main "I'm okay"
+    aasim "I'm okay"
 
     "You look at the time. You're late!!"
 
@@ -493,19 +493,19 @@ label story_c_news:
     show calendar1 with dissolve
     "Today's Date: July 13th, 2018"
     "Election Day: July 25th, 2018"
-    "Dr. Ralhan comes for shots: July 28th, 2018"
+    "Dr. Rahman comes for shots: July 28th, 2018"
 
     menu:
         "Keep looking at your Calendar?":
             jump story_c_calendar
-        "Binder!":
+        "Tinder!":
             jump story_c_binder
 
 label story_c_calendar:
     show calendar2 with dissolve
     "Right ... Hajj ... "
 
-    "Hopefully Allah can change the thinking of the Saudi Government in my lifetime"
+    "Hopefully things will change in the Saudi Government soon, insha'Allah "
 
     "You look over at the clock for the time. You're late!!"
 
@@ -539,14 +539,14 @@ label story_c_binder_repeating:
 
 label story_c_late:
     show makeup with dissolve
-    "You run to the bathroom and shart putting on your make up"
+    "You run to the bathroom and start putting on your make up"
 
-    "You wear the salwar kameez you bought last weekend and head out. You wave hello to the chowkidar and head down the road"
+    "You wear the salwar kameez that you bought last weekend and head out. You wave hello to the chowkidar and head down the road"
 
     menu:
-        "Take the back roads. Less People means less stares":
+        "Take the back roads. Less people means less stares":
             jump story_c_back_road
-        "Theres safety in being in public":
+        "There's safety in being in public":
             jump story_c_main_road
 
 label story_c_back_road:
@@ -558,7 +558,7 @@ label story_c_back_road:
 label story_c_main_road:
     show mainroad with dissolve
     "Hey! Beautiful gay!"
-    "You look at the standing niama (police officer or mother's brother"
+    "You look at the standing mama"
     "He burns away, 'Family always has your back', you say sarcastically under your breath"
     "Hmm... maybe you should call your brother today. Although it is his responsiblity"
     jump story_c_arrived
