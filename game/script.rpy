@@ -484,7 +484,7 @@ label story_c_morning_routine:
 
 label story_c_news:
     scene news with dissolve
-    "Once ostracized now Pakistan: Transgender people are running for Parliament"
+    "Once ostracized now Pakistani Transgender people are running for Parliament"
 
     "{i}Hmmm.... maybe I should vote this year. When are Elections again?{/i}"
 
