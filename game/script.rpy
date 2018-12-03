@@ -592,8 +592,8 @@ label story_c_rikshaw:
     jump story_c_home
 
 label story_c_uber:
-    scene pk uberpak with dissolve
-    "You walk outside and she picks you up. You say 'thank you' and get out"
+    scene pk uber with dissolve
+    "You walk outside and she picks you up. You say thank you and get out"
     "No words other than that"
     jump story_c_home
 
