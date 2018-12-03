@@ -22,9 +22,6 @@ define aasim   = Character("Aasim")
 define brother   = Character("Brother")
 define pak_main   = Character("You")
 
-
-
-
 # The game starts here.
 
 # story_a = set in Canada
@@ -45,6 +42,7 @@ label start:
             jump story_b
         "Canada":
             jump story_a
+
 label end:
     scene main_menu
     "Play Again?"
@@ -100,7 +98,7 @@ label story_a_fake_sick:
             jump story_a_stay_bed
 
 label story_a_stay_bed:
-    can_main "*thinking* This is never gonna get any better, why would I even bother? Ughhhhh I’m going back to sleep… "
+    can_main "(thinking) This is never gonna get any better, why would I even bother? Ughhhhh I’m going back to sleep… "
     jump end
 
 label story_a_principal:
@@ -152,7 +150,7 @@ label story_a_home:
             jump story_a_therapy
 
 label story_a_ditch_school:
-    can_main "*thinking* I can’t do this anymore I need to go somewhere"
+    can_main "(thinking) I can’t do this anymore I need to go somewhere"
     menu:
         "Go home":
             jump story_a_therapy
@@ -246,7 +244,8 @@ label story_b:
             jump story_b_werent_listening
 
 label story_b_reassure:
-    yuuki "{a=http://lang-8.com/725244/journals/199182171541683591437838792131877435706}{i}Ganbarimasu.{/i}{/a}"
+    yuuki "{a=http://lang-8.com/725244/journals/199182171541683591437838792131877435706}{i}Ganbarimasu.{/i}{/a} {image=jpGanbarimasu.png}"
+
 
     jap_mom "That's our Yuuki!"
 
@@ -502,7 +501,7 @@ label story_c_news:
             jump story_c_binder
 
 label story_c_calendar:
-    show calendar2 with dissolve
+    scene calendar2 with dissolve
     "Right ... Hajj ... "
 
     "Hopefully Allah can change the thinking of the Saudi Government in my lifetime"
@@ -512,7 +511,7 @@ label story_c_calendar:
     jump story_c_late
 
 label story_c_binder:
-    show tinder with dissolve
+    scene tinder with dissolve
     "Left, Left, Lef....oooo...."
 
     "nope. jk. He's too pendu"
@@ -526,7 +525,7 @@ label story_c_binder:
             jump story_c_news
 
 label story_c_binder_repeating:
-    show tinder with dissolve
+    scene tinder with dissolve
     "Left, Left, Left"
 
     "Still nothing good today"
@@ -538,7 +537,7 @@ label story_c_binder_repeating:
             jump story_c_news
 
 label story_c_late:
-    show makeup with dissolve
+    scene makeup with dissolve
     "You run to the bathroom and shart putting on your make up"
 
     "You wear the salwar kameez you bought last weekend and head out. You wave hello to the chowkidar and head down the road"
@@ -550,13 +549,13 @@ label story_c_late:
             jump story_c_main_road
 
 label story_c_back_road:
-    show backroad with dissolve
+    scene backroad with dissolve
     "You walk through some alleys. On your way, you say hello to some children, give 100 rupees to the woman on the street corner (even though you know it goes straight to the guru - 100 rupees for a blessing isnt too bad of a deal), and skip over some puddles"
     "Nothing too out of the ordinary"
     jump story_c_arrived
 
 label story_c_main_road:
-    show mainroad with dissolve
+    scene mainroad with dissolve
     "Hey! Beautiful gay!"
     "You look at the standing niama (police officer or mother's brother"
     "He burns away, 'Family always has your back', you say sarcastically under your breath"
@@ -564,13 +563,13 @@ label story_c_main_road:
     jump story_c_arrived
 
 label story_c_arrived:
-    show office with dissolve
+    scene office with dissolve
     " 'Government of Pakistan' ... You're Here"
     "You hand the security guard your I.D. He looks you up and down and looks like he’s about to raise an eyebrow. But he doesn’t. You’re let in without exchanging a word"
     "Normal day at work. Paper pushing, phone checking, some staring"
     "Who actually cares about other people’s takes"
 
-    show clock3pm with dissolve
+    scene clock3pm with dissolve
     "The clock hits 3pm. Time to check out and you're feeling lazy"
     menu:
         "Rikshaw":
@@ -579,7 +578,7 @@ label story_c_arrived:
             jump story_c_uber
 
 label story_c_rikshaw:
-    show rickshaw with dissolve
+    scene rickshaw with dissolve
     "You walk to the street corner and flag one down. He takes you home and takes you home and you pay in 20 rupees. He says thank you"
     "No words other than that"
     jump story_c_home

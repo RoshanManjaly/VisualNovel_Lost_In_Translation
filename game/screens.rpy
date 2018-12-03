@@ -974,7 +974,7 @@ screen help():
 
     tag menu
 
-    default device = "mouse"
+    default device = "general"
 
     use game_menu(_("Help"), scroll="viewport"):
 
@@ -984,7 +984,7 @@ screen help():
             spacing 15
 
             hbox:
-
+                textbutton _("General") action SetScreenVariable("device", "general")
                 textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
                 textbutton _("Mouse") action SetScreenVariable("device", "mouse")
 
@@ -995,6 +995,8 @@ screen help():
                 use keyboard_help
             elif device == "mouse":
                 use mouse_help
+            elif device == "general":
+                use custom_help_screen
             elif device == "gamepad":
                 use gamepad_help
 
@@ -1145,8 +1147,6 @@ style help_label_text:
     size gui.text_size
     xalign 1.0
     text_align 1.0
-
-
 
 ################################################################################
 ## Additional screens
