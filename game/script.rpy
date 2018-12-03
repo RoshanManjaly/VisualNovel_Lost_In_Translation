@@ -49,7 +49,7 @@ label start:
 
 label story_a_define:
     scene black with fade
-    jump story_c
+    jump story_a
 
 label story_b_define:
     scene black with fade
@@ -92,7 +92,7 @@ label end:
 ###################### Canada Story Start
 
 label story_a:
-    scene ca_bedroom
+    scene ca_morning
     can_main "Ugh it's morning…"
     menu:
         "Go to school":
@@ -187,7 +187,7 @@ label story_a_home:
             jump story_a_therapy
 
 label story_a_ditch_school:
-    can_main "*thinking* I can’t do this anymore I need to go somewhere"
+    can_main "{i}I can’t do this anymore I need to go somewhere{/i}"
     menu:
         "Go home":
             jump story_a_therapy
@@ -195,7 +195,7 @@ label story_a_ditch_school:
             jump story_a_therapy
 
 label story_a_coffee_shop:
-    can_main "(thinking) *Sigh* I love this place… Maybe I should order something that will calm me down."
+    can_main "*Sigh* {i}I love this place… Maybe I should order something that will calm me down.{/i}"
     menu:
         "Order a cool espresso drink":
             jump story_a_coffee_shop_next
@@ -204,7 +204,7 @@ label story_a_coffee_shop:
 
 
 label story_a_coffee_shop_next:
-    can_main "(thinking) *Sighing* Ahhh that’s kind of better… Ugh I don’t know what to do. I’m so all over the place, I need to organize my thoughts."
+    can_main "*Sighing* {i}Ahhh that’s kind of better… Ugh I don’t know what to do. I’m so all over the place, I need to organize my thoughts.{/i}"
     menu:
         "Listen to music and reflect":
             jump story_a_music
@@ -212,18 +212,19 @@ label story_a_coffee_shop_next:
             jump story_a_journal
 
 label story_a_music:
-    can_main "(thinking) This isn’t working…"
+    can_main "{i}This isn’t working…{/i}"
     menu:
         "Write in journal":
             jump story_a_journal
 
 
 label story_a_journal:
-    can_main "(thinking) Well she told me to keep a journal months ago and I’ve just been carrying this empty one around in my bag… time to use it. I don’t really see how it could help but there’s no harm in trying I guess…"
-    "(writes) Dear Diary (scratch out)"
+    can_main "{i}Well she told me to keep a journal months ago and I’ve just been carrying this empty one around in my bag… time to use it. I don’t really see how it could help but there’s no harm in trying I guess…{/i}"
+    "*writing* Dear Diary"
+    "*scratch out*"
     "..."
-    "(thinking) No that’s not my style…"
-    "(writes) I don’t really know what has been going on with me, but I guess that’s why I’m writing this…"
+    "{i}No that’s not my style…{/i}"
+    "*writing* I don’t really know what has been going on with me, but I guess that’s why I’m writing this…"
     jump end
 
 
