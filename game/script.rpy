@@ -297,7 +297,7 @@ label story_b:
             jump story_b_werent_listening
 
 label story_b_reassure:
-    yuuki "{a=http://lang-8.com/725244/journals/199182171541683591437838792131877435706}{i}Ganbarimasu.{/i}{/a}"
+    yuuki "Ganbarimasu"
 
     jap_mom "That's our Yuuki!"
 
