@@ -119,16 +119,16 @@ label story_a_to_school:
         "Get frustrated":
             jump story_a_frustrated
 
-label story_a_frustrated
+label story_a_frustrated:
     scene ca_camila
     show ca_teacher_outside at left
     can_main "YOU DON’T GET IT! *slam fist into lockers* "
     camila "*yelps*"
     can_main "(thinking) oh no I didn’t mean it… I--"
     teacher "Stop right there, young lady! You’re going to the principal’s office"
-        menu:
-            "Go to principal’s office":
-                jump story_a_principal
+    menu:
+        "Go to principal’s office":
+            jump story_a_principal
 
 label story_a_brush_off:
     can_main "Maybe…"
