@@ -1013,6 +1013,7 @@ screen glossary():
             text _("Chai - spiced milk tea\n")
             text _("Chalo - literally ‘let’s go;’ often used as a transition in conversation\n")
             text _("Chowkidar - gate keeper\n")
+            text _("Ganbarimasu - a casual response meaning, “Yes, I'll do my best!”\n")
             text _("Guru - literally ‘teacher;’ in the context of transgender communities, it refers to the matriarch of the adoptive family structures that often form. ‘Gurus’ are often compared to Western pimps.\n")
             text _("Hajj - an annual pilgrimage to Mecca that takes place in the last month of the year that all Muslims are expected to make at least once in their lifetime\n")
             text _("insha’Allah = ‘God willing’\n")
@@ -1023,7 +1024,8 @@ screen glossary():
             text _("Saas - literally ‘mother-in-law’\n")
             text _("Salwar Kameez - a traditional South Asian outfit with a long tunic and loose, pleated trousers\n")
             text _("Sensei - a teacher\n")
-
+            textbutton _("Article: The Nail that Sticks Up...Conformity In Japan\n") action OpenURL("https://www.tofugu.com/japan/conformity-in-japan/")
+            textbutton _("Article: Once ostracised, now Pakistani transgender people are running for parliament\n") action OpenURL("https://www.theguardian.com/world/2018/jul/23/pakistani-transgender-people-office-election")
 
 ## This is redefined in options.rpy to add text to the glossary screen.
 define gui.glossary = ""

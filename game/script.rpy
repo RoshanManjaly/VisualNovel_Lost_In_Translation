@@ -32,7 +32,7 @@ define pak_main   = Character("You")
 # TODO: Add BGM for each of the routes
 
 label start:
-    scene selection_v4
+    scene selection_v5
     "Where would you like travel to?"
 
     menu:
@@ -51,10 +51,10 @@ label story_b_define:
 label story_c_define:
     scene black with fade
     jump story_c
+
 label end:
     scene main_menu
     "Play Again?"
-
     menu:
         "Yes ... Return to Menu":
             jump start
@@ -191,7 +191,7 @@ label story_a_coffee:
             jump story_a_coffee_shop_next
 label story_a_coffee_shop_next:
     scene ca_coffee
-    can_main "{i} *Sighing* Ahhh that’s kind of better… Ugh I don’t know what to do. I’m so all over the place, I need to organize my thoughts.{\i}"
+    can_main "{i} *Sighing* Ahhh that’s kind of better… Ugh, I don’t know what to do. I’m so all over the place, I need to organize my thoughts.{\i}"
     menu:
         "Listen to music and reflect":
             jump story_a_music
@@ -245,7 +245,7 @@ label story_b:
 
     jap_mom "Your father and I are only getting older. We only have so many years left to see our grandchildren before we make our exit."
 
-    "It's funny she'd say that, because youd been thinking of getting sterilized... you don't know that you never want biological children, but Japanese law won't recognize your gender identity unless you become 'unable to reproduce'."
+    "It's funny she'd say that, because you had been thinking of getting sterilized... you don't know that you never want biological children, but Japanese law won't recognize your gender identity unless you become 'unable to reproduce'."
 
     jap_mom "Yuuki-chan, are you listening? Tell your parents they won't die before seeing their grandchildren."
 
@@ -260,7 +260,7 @@ label story_b:
             jump story_b_werent_listening
 
 label story_b_reassure:
-    yuuki "{a=https://hinative.com/en-US/questions/317088}Ganbarimasu.{/a}"
+    yuuki "Ganbarimasu."
 
     jap_mom "That's our Yuuki-chan!"
 
@@ -299,7 +299,7 @@ label story_b_end_of_call:
 
     play sound "sound/call_end.mp3"
 
-    yuuki "*sigh in mild relief*. Another uneventful conversation with your parents, another day you remain in their good graces as their only and darling daughter. You keep telling myself that one day, one of these days, you'll tell them about your gender troubles and happenings, but there's never seems like a 'right' time."
+    yuuki "*sigh in mild relief*. Another uneventful conversation with your parents, another day you remain in their good graces as their only and darling daughter. You keep telling myself that one day, one of these days, you'll tell them about your gender troubles and happenings, but there never seems like a 'right' time."
     hide ca_home_t
     scene jp room
     "Students shuffle into the classroom, as lethargic as you'd expect high schoolers to be on a Monday afternoon."
@@ -336,7 +336,7 @@ label story_b_end_of_call:
 
     show jp hallway with dissolve
 
-    "As a new faculty member, you haven't yet been asked to sponsor any after-school club, so you go home a little earlier than other teachers."
+    "As a new faculty member, you haven't yet been asked to sponsor an after-school club, so you go home a little earlier than other teachers."
 
     "You make my way through the school hallways, idly trying to recall if you have any unexpired food left in the fridge."
 
@@ -405,7 +405,7 @@ label story_b_troubles_with_parents:
 
     yuuki "It's nothing big! They just keep pushing me to get a girlfriend; they don't like how much of a loner I seem to be."
 
-    "You cringe slightly at your use of 'girlfriend', when your parents would probably faint if they'd heard you had one."
+    "You cringe slightly at your use of 'girlfriend' when your parents would probably faint if they'd heard you had one."
 
     ayako "You {i}are{/i} a bit of a loner. Maybe a girlfriend would get you to go out more!"
 
@@ -427,7 +427,7 @@ label story_b_troubles_with_parents:
 
     "Sato-sensei immediately puts her hands up, palms toward you, signaling for you not to feel bad about your rejection."
 
-    ayako "I completely understand. I have some paperwork to fill out, so we should catch up more later."
+    ayako "I completely understand. I have some paperwork to fill out, so we should catch up some more later."
 
     "You nod and walk back into the hallway."
 
@@ -448,11 +448,11 @@ label story_b_continue_home:
 
     "You look through my Twitter feed, hoping to find some meme or another to make you laugh."
 
-    "Instead, you come across a tweet from Ebina City Council member Tsuruhashi Masumi, in response to Asahi Shimbun's report on an attitude survey regarding same sex marriage:"
+    "Instead, you come across a tweet from Ebina City Council member Tsuruhashi Masumi, in response to Asahi Shimbun's report on an attitude survey regarding same-sex marriage:"
 
     "'If abnormal people increase, human beings will become extinct... Homosexuality is abnormal. Media should be more responsible than to report abnormal activities.'"
 
-    "'{a=https://www.tofugu.com/japan/conformity-in-japan/}The nail that sticks out gets hammered down{\a},' as the saying goes."
+    "The nail that sticks out gets hammered down as the saying goes."
 
     "Would you be regarded as a 'homosexual' in Tsuruhashi-san's eyes, when you identify as a man and are interested in women? Probably, you think, resolving not to dwell on the subject."
 
@@ -463,7 +463,6 @@ label story_b_continue_home:
     hide jp train with dissolve
 
     # This ends the game.
-
     jump end
 ###################### Japan Story End
 
@@ -564,13 +563,13 @@ label story_c_late:
     "You wear the salwar kameez that you bought last weekend and head out. You wave hello to the chowkidar and head down the road"
 
     menu:
-        "Take the back roads. Less people means less stares":
+        "Take the back roads. Fewer people means fewer stares":
             jump story_c_back_road
         "There's safety in being in public":
             jump story_c_main_road
 label story_c_back_road:
     scene pk backroad with dissolve
-    "You walk through some alleys. On your way, you say hello to some children, give 100 rupees to the woman on the street corner (even though you know it goes straight to the guru - 100 rupees for a blessing isnt too bad of a deal), and skip over some puddles"
+    "You walk through some alleys. On your way, you say hello to some children, give 100 rupees to the woman on the street corner (even though you know it goes straight to the guru - 100 rupees for a blessing isn't too bad of a deal), and skip over some puddles"
     "{i}Nothing too out of the ordinary{/i}"
     jump story_c_arrived
 label story_c_main_road:
@@ -628,8 +627,8 @@ label story_c_tv_drama:
     "{i}Finally, not another saas-bahu drama {/i}"
     "You enjoy your lazy day. You watch T.V. till it's time to prep dinner. You wash your dishes, do your night prayers, and head to bed."
     #Story is finished
-
     jump end
+
 label story_c_brother:
     scene black
     show pk bhai with dissolve
@@ -641,7 +640,7 @@ label story_c_brother:
     brother "We broke up"
     pak_main "Oh ... Are you okay? Do you want to talk about it?"
     brother "I'm fine, but I don't feel like talking"
-    pak_main "He wont tell anyone, will he?"
+    pak_main "He won't tell anyone, will he?"
     brother "He's not tryna to kill me"
     pak_main "Okay. Okay. What can I do?"
     brother "Nothing right now. ... I'm fine ... Chalo, I'll call you this weekend. I'm a little busy right now"
